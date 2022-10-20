@@ -15,7 +15,24 @@ struct ContentView: View {
                     Image(systemName: "cube.fill")
                     Text("Project")
                 }
-                
+            
+            NotificationView()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    Text("Notification")
+                }
+            
+            TutorialView()
+                .tabItem {
+                    Image(systemName: "video.fill")
+                    Text("Tutorials")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Settings")
+                }
         }
     }
 }
@@ -31,15 +48,11 @@ struct ContentView: View {
 
 
 
-
-
-
-
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            
+            
     }
 }
 

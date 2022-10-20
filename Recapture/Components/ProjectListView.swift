@@ -36,14 +36,16 @@ struct ProjectListView: View {
                         //              Project Details
                         VStack(alignment: .leading, spacing: 4.0) {
                             Text("Full name of project with a max of two lines and more, i want it auto truncated into two lines")
-                                .font(.callout)
+                                .font(.body)
                                 .fontWeight(.semibold)
                                 .lineLimit(2)
                             
                             
                             VStack(alignment: .leading) {
                                 Text ("Created Jun 19, 2022")
+                                    .font(.subheadline)
                                 Text ("Last edit 2 minutes ago")
+                                    .font(.subheadline)
                                 
                             }
                             .font(.footnote)
