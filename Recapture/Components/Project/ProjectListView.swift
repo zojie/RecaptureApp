@@ -12,28 +12,21 @@ struct ProjectListView: View {
         
         VStack(alignment: .leading) {
             
-            //            Controllers
-            HStack(spacing: 16.0) {
-                Text ("Projects")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(Color.blue)
-                Text ("Drafts")
-                    .font(.system(size: 14, weight: .semibold))
-            }
-            .padding()
+            //Controllers
+            ProjectHeader()
             
-            //            Project Lists
+            //Project List
             List {
                 ForEach(0..<3) { item in
                     
-                    //             ImageAR Preview
+                    //Image AR View
                     HStack {
                         Image(systemName: "image")
                             .frame(width: 100, height: 100)
                             .background(Color(#colorLiteral(red: 0.886274516582489, green: 0.886274516582489, blue: 0.8980392217636108, alpha: 1)))
                             .cornerRadius(12)
                         
-                        //              Project Details
+                        //Project Details
                         VStack(alignment: .leading, spacing: 4.0) {
                             Text("Full name of project with a max of two lines and more, i want it auto truncated into two lines")
                                 .font(.body)
@@ -52,8 +45,9 @@ struct ProjectListView: View {
                             .foregroundColor(.gray)
                             
                             
-                            HStack {
+                            HStack(spacing: 4.0) {
                                 Text ("18MB")
+                                Text ("•")
                                 Text ("42 Images")
                             }
                             .font(.footnote)
@@ -61,8 +55,8 @@ struct ProjectListView: View {
                         }
                         .padding(.vertical)
                         
-                        //                 More Options
-                        Image(systemName: "eye")
+                        //More Options
+                        ProjectActions()
                     }
                 }
             }

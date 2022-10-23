@@ -23,6 +23,7 @@ struct TutorialMore: View {
             .padding()
             
             List(0..<3) { item in
+                
                 VStack {
                     Text("Visit our Blog")
                 }

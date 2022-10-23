@@ -10,6 +10,12 @@
 		1F2CF9FC28FD9978007ADB05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF9FB28FD9978007ADB05 /* HomeView.swift */; };
 		1F2CF9FE28FD9FE3007ADB05 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF9FD28FD9FE3007ADB05 /* ProjectListView.swift */; };
 		1F2CFA0328FDB014007ADB05 /* HeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CFA0228FDB014007ADB05 /* HeaderBar.swift */; };
+		1F665E322904A8C000FE0BD6 /* ProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E312904A8C000FE0BD6 /* ProjectActions.swift */; };
+		1F665E342904AA8800FE0BD6 /* ProjectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E332904AA8800FE0BD6 /* ProjectData.swift */; };
+		1F665E362904AD8000FE0BD6 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E352904AD8000FE0BD6 /* NotificationData.swift */; };
+		1F665E382904B6E100FE0BD6 /* ProjectHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E372904B6E100FE0BD6 /* ProjectHeader.swift */; };
+		1F665E3E2904BE0700FE0BD6 /* AccountView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E3D2904BE0700FE0BD6 /* AccountView1.swift */; };
+		1F665E402904BE1800FE0BD6 /* AccountView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E3F2904BE1800FE0BD6 /* AccountView2.swift */; };
 		1F7C2ED928FCD1C000972C3A /* RecaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C2ED828FCD1C000972C3A /* RecaptureApp.swift */; };
 		1F7C2EDB28FCD1C000972C3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C2EDA28FCD1C000972C3A /* ContentView.swift */; };
 		1F7C2EDD28FCD1C300972C3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7C2EDC28FCD1C300972C3A /* Assets.xcassets */; };
@@ -21,13 +27,11 @@
 		1F7C2EFB28FCD1C300972C3A /* RecaptureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C2EFA28FCD1C300972C3A /* RecaptureUITestsLaunchTests.swift */; };
 		1FF886002901647D0074656B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF885FF2901647D0074656B /* CardView.swift */; };
 		1FF88603290170D10074656B /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF88602290170D10074656B /* ProjectView.swift */; };
-		1FF88605290173320074656B /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF88604290173320074656B /* HeaderData.swift */; };
 		1FF8860729017C5B0074656B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8860629017C5B0074656B /* NotificationView.swift */; };
 		1FF8860929017C840074656B /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8860829017C840074656B /* Notifications.swift */; };
 		1FF8860B29017FFE0074656B /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8860A29017FFE0074656B /* TutorialView.swift */; };
 		1FF8860D290180170074656B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8860C290180170074656B /* SettingsView.swift */; };
 		1FF8860F290180320074656B /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8860E290180320074656B /* Tutorial.swift */; };
-		1FF886112901832D0074656B /* AccountSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF886102901832D0074656B /* AccountSettings.swift */; };
 		1FF8861329018BA90074656B /* TutorialMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8861229018BA90074656B /* TutorialMore.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,12 @@
 		1F2CF9FB28FD9978007ADB05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1F2CF9FD28FD9FE3007ADB05 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		1F2CFA0228FDB014007ADB05 /* HeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBar.swift; sourceTree = "<group>"; };
+		1F665E312904A8C000FE0BD6 /* ProjectActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectActions.swift; sourceTree = "<group>"; };
+		1F665E332904AA8800FE0BD6 /* ProjectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectData.swift; sourceTree = "<group>"; };
+		1F665E352904AD8000FE0BD6 /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
+		1F665E372904B6E100FE0BD6 /* ProjectHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeader.swift; sourceTree = "<group>"; };
+		1F665E3D2904BE0700FE0BD6 /* AccountView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView1.swift; sourceTree = "<group>"; };
+		1F665E3F2904BE1800FE0BD6 /* AccountView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView2.swift; sourceTree = "<group>"; };
 		1F7C2ED528FCD1C000972C3A /* Recapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7C2ED828FCD1C000972C3A /* RecaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecaptureApp.swift; sourceTree = "<group>"; };
 		1F7C2EDA28FCD1C000972C3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,13 +76,11 @@
 		1F7C2EFA28FCD1C300972C3A /* RecaptureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecaptureUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1FF885FF2901647D0074656B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1FF88602290170D10074656B /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
-		1FF88604290173320074656B /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
 		1FF8860629017C5B0074656B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		1FF8860829017C840074656B /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		1FF8860A29017FFE0074656B /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		1FF8860C290180170074656B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1FF8860E290180320074656B /* Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
-		1FF886102901832D0074656B /* AccountSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettings.swift; sourceTree = "<group>"; };
 		1FF8861229018BA90074656B /* TutorialMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,9 +125,48 @@
 		1F2CFA0128FDAD9F007ADB05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1FF88604290173320074656B /* HeaderData.swift */,
+				1F665E332904AA8800FE0BD6 /* ProjectData.swift */,
+				1F665E352904AD8000FE0BD6 /* NotificationData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1F665E392904BCE100FE0BD6 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				1F2CFA0228FDB014007ADB05 /* HeaderBar.swift */,
+				1FF885FF2901647D0074656B /* CardView.swift */,
+				1F665E372904B6E100FE0BD6 /* ProjectHeader.swift */,
+				1F2CF9FD28FD9FE3007ADB05 /* ProjectListView.swift */,
+				1F665E312904A8C000FE0BD6 /* ProjectActions.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		1F665E3A2904BCEF00FE0BD6 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				1F665E3D2904BE0700FE0BD6 /* AccountView1.swift */,
+				1F665E3F2904BE1800FE0BD6 /* AccountView2.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		1F665E3B2904BCF500FE0BD6 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				1FF8860829017C840074656B /* Notifications.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		1F665E3C2904BCFF00FE0BD6 /* Tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				1FF8860E290180320074656B /* Tutorial.swift */,
+				1FF8861229018BA90074656B /* TutorialMore.swift */,
+			);
+			path = Tutorials;
 			sourceTree = "<group>";
 		};
 		1F7C2ECC28FCD1C000972C3A = {
@@ -185,13 +232,10 @@
 		1FF886012901702D0074656B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1F2CFA0228FDB014007ADB05 /* HeaderBar.swift */,
-				1F2CF9FD28FD9FE3007ADB05 /* ProjectListView.swift */,
-				1FF885FF2901647D0074656B /* CardView.swift */,
-				1FF8860829017C840074656B /* Notifications.swift */,
-				1FF8860E290180320074656B /* Tutorial.swift */,
-				1FF886102901832D0074656B /* AccountSettings.swift */,
-				1FF8861229018BA90074656B /* TutorialMore.swift */,
+				1F665E392904BCE100FE0BD6 /* Project */,
+				1F665E3B2904BCF500FE0BD6 /* Notification */,
+				1F665E3C2904BCFF00FE0BD6 /* Tutorials */,
+				1F665E3A2904BCEF00FE0BD6 /* Account */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -331,17 +375,21 @@
 				1F2CFA0328FDB014007ADB05 /* HeaderBar.swift in Sources */,
 				1FF886002901647D0074656B /* CardView.swift in Sources */,
 				1FF8860F290180320074656B /* Tutorial.swift in Sources */,
+				1F665E322904A8C000FE0BD6 /* ProjectActions.swift in Sources */,
+				1F665E3E2904BE0700FE0BD6 /* AccountView1.swift in Sources */,
 				1FF88603290170D10074656B /* ProjectView.swift in Sources */,
+				1F665E402904BE1800FE0BD6 /* AccountView2.swift in Sources */,
 				1FF8860729017C5B0074656B /* NotificationView.swift in Sources */,
+				1F665E362904AD8000FE0BD6 /* NotificationData.swift in Sources */,
 				1F7C2EE228FCD1C300972C3A /* Persistence.swift in Sources */,
+				1F665E342904AA8800FE0BD6 /* ProjectData.swift in Sources */,
 				1FF8860D290180170074656B /* SettingsView.swift in Sources */,
 				1F7C2EE528FCD1C300972C3A /* Recapture.xcdatamodeld in Sources */,
 				1F7C2EDB28FCD1C000972C3A /* ContentView.swift in Sources */,
 				1FF8861329018BA90074656B /* TutorialMore.swift in Sources */,
 				1F2CF9FC28FD9978007ADB05 /* HomeView.swift in Sources */,
 				1F2CF9FE28FD9FE3007ADB05 /* ProjectListView.swift in Sources */,
-				1FF88605290173320074656B /* HeaderData.swift in Sources */,
-				1FF886112901832D0074656B /* AccountSettings.swift in Sources */,
+				1F665E382904B6E100FE0BD6 /* ProjectHeader.swift in Sources */,
 				1F7C2ED928FCD1C000972C3A /* RecaptureApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
