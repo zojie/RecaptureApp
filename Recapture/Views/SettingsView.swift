@@ -21,7 +21,8 @@ struct SettingsView: View {
                 
             }
             .padding()
-            Spacer()
+            
+            SectionOne()
 
         }
     }

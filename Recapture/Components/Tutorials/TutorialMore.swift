@@ -22,12 +22,36 @@ struct TutorialMore: View {
             }
             .padding()
             
-            List(0..<3) { item in
-                
-                VStack {
-                    Text("Visit our Blog")
+            Form {
+
+                Section {
+                    //Visit
+                    HStack {
+                        Text("Visit our Blog")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .foregroundColor(.blue)
+                    }
+                    
+                    //Join Community
+                    HStack {
+                        Text("Join Twitter Community")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .foregroundColor(.blue)
+                    }
+                    
+                    //Ehizojie's Twitter
+                    HStack {
+                        Text("Ehizojie's Twitter")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .foregroundColor(.blue)
+                    }
                 }
             }
+            
+
         }
     }
 }

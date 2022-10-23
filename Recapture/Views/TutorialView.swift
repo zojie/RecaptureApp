@@ -10,19 +10,21 @@ import SwiftUI
 struct TutorialView: View {
     var body: some View {
         VStack(alignment: .leading) {
-           VStack(alignment: .leading) {
-                    Text("Tutorials")
-                        .font(.system(size: 22, weight: .bold))
-                        .foregroundColor(Color.gray)
-                        .tracking(-0.88)
-                    Text("Ehizojie, lets see how its done")
-                        .font(.system(size: 22, weight: .bold))
-                        .tracking(-0.44)
+            VStack(alignment: .leading) {
+                Text("Tutorials")
+                    .font(.system(size: 22, weight: .bold))
+                    .foregroundColor(Color.gray)
+                    .tracking(-0.88)
+                Text("Ehizojie, lets see how its done")
+                    .font(.system(size: 22, weight: .bold))
+                    .tracking(-0.44)
             }
             .padding()
             
-            Tutorial()
-            TutorialMore()
+            ScrollView {
+                Tutorial()
+                TutorialMore()
+            }
         }
     }
 }
