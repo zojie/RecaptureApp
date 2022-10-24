@@ -22,7 +22,11 @@ struct SettingsView: View {
             }
             .padding()
             
-            SectionOne()
+            SettingsManager()
+            Text("Recapture v1.0")
+                .padding()
+                .foregroundColor(.gray)
+                .font(.callout)
 
         }
     }
