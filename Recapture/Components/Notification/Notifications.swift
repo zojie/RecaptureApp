@@ -51,7 +51,7 @@ struct Notifications: View {
                     }
                 }
             }
-            .listStyle(.grouped)
+            .listStyle(.plain)
         }
     }
 }

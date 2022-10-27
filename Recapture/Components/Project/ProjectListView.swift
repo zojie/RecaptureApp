@@ -60,7 +60,7 @@ struct ProjectListView: View {
                     }
                 }
             }
-            .listStyle(.grouped)
+            .listStyle(.plain)
         }
     }
 }

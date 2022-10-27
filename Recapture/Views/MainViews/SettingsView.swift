@@ -23,10 +23,10 @@ struct SettingsView: View {
             .padding()
             
             SettingsManager()
-            Text("Recapture v1.0")
-                .padding()
-                .foregroundColor(.gray)
-                .font(.callout)
+//            Text("Recapture v1.0")
+//                .padding()
+//                .foregroundColor(.gray)
+//                .font(.callout)
 
         }
     }
