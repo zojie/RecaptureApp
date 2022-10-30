@@ -11,12 +11,11 @@
 		1F2CF9FE28FD9FE3007ADB05 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF9FD28FD9FE3007ADB05 /* ProjectListView.swift */; };
 		1F2CFA0328FDB014007ADB05 /* HeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CFA0228FDB014007ADB05 /* HeaderBar.swift */; };
 		1F5A164E290F166A00F9B42C /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A164D290F166A00F9B42C /* LanguageView.swift */; };
-		1F5A1650290F2CBA00F9B42C /* TestTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A164F290F2CBA00F9B42C /* TestTab.swift */; };
+		1F5A1652290F38D600F9B42C /* ToolBarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A1651290F38D600F9B42C /* ToolBarTest.swift */; };
 		1F665E322904A8C000FE0BD6 /* ProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E312904A8C000FE0BD6 /* ProjectActions.swift */; };
 		1F665E342904AA8800FE0BD6 /* ProjectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E332904AA8800FE0BD6 /* ProjectData.swift */; };
 		1F665E362904AD8000FE0BD6 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E352904AD8000FE0BD6 /* NotificationData.swift */; };
 		1F665E382904B6E100FE0BD6 /* ProjectHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E372904B6E100FE0BD6 /* ProjectHeader.swift */; };
-		1F665E502905FC7A00FE0BD6 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E4F2905FC7A00FE0BD6 /* SettingsManager.swift */; };
 		1F665E592906014300FE0BD6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E582906014300FE0BD6 /* LoginView.swift */; };
 		1F665E5B2906015000FE0BD6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E5A2906015000FE0BD6 /* SignupView.swift */; };
 		1F665E5D2906015D00FE0BD6 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E5C2906015D00FE0BD6 /* ForgotPasswordView.swift */; };
@@ -67,12 +66,11 @@
 		1F2CF9FD28FD9FE3007ADB05 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		1F2CFA0228FDB014007ADB05 /* HeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBar.swift; sourceTree = "<group>"; };
 		1F5A164D290F166A00F9B42C /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
-		1F5A164F290F2CBA00F9B42C /* TestTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTab.swift; sourceTree = "<group>"; };
+		1F5A1651290F38D600F9B42C /* ToolBarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarTest.swift; sourceTree = "<group>"; };
 		1F665E312904A8C000FE0BD6 /* ProjectActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectActions.swift; sourceTree = "<group>"; };
 		1F665E332904AA8800FE0BD6 /* ProjectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectData.swift; sourceTree = "<group>"; };
 		1F665E352904AD8000FE0BD6 /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
 		1F665E372904B6E100FE0BD6 /* ProjectHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeader.swift; sourceTree = "<group>"; };
-		1F665E4F2905FC7A00FE0BD6 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		1F665E582906014300FE0BD6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F665E5A2906015000FE0BD6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		1F665E5C2906015D00FE0BD6 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
@@ -206,13 +204,12 @@
 			isa = PBXGroup;
 			children = (
 				1F7C2EDA28FCD1C000972C3A /* ContentView.swift */,
-				1F5A164F290F2CBA00F9B42C /* TestTab.swift */,
 				1F2CF9FB28FD9978007ADB05 /* HomeView.swift */,
 				1FF88602290170D10074656B /* ProjectView.swift */,
 				1FF8860629017C5B0074656B /* NotificationView.swift */,
 				1FF8860A29017FFE0074656B /* TutorialView.swift */,
-				1F665E4F2905FC7A00FE0BD6 /* SettingsManager.swift */,
 				1FF8860C290180170074656B /* SettingsView.swift */,
+				1F5A1651290F38D600F9B42C /* ToolBarTest.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -472,10 +469,9 @@
 				1F7C2EDB28FCD1C000972C3A /* ContentView.swift in Sources */,
 				1FF8861329018BA90074656B /* TutorialMore.swift in Sources */,
 				1F665E592906014300FE0BD6 /* LoginView.swift in Sources */,
-				1F5A1650290F2CBA00F9B42C /* TestTab.swift in Sources */,
 				1F2CF9FC28FD9978007ADB05 /* HomeView.swift in Sources */,
+				1F5A1652290F38D600F9B42C /* ToolBarTest.swift in Sources */,
 				1F2CF9FE28FD9FE3007ADB05 /* ProjectListView.swift in Sources */,
-				1F665E502905FC7A00FE0BD6 /* SettingsManager.swift in Sources */,
 				1F665E382904B6E100FE0BD6 /* ProjectHeader.swift in Sources */,
 				1F665E5B2906015000FE0BD6 /* SignupView.swift in Sources */,
 				1F7C2ED928FCD1C000972C3A /* RecaptureApp.swift in Sources */,

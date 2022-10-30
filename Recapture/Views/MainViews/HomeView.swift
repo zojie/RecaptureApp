@@ -9,12 +9,36 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack(spacing:16) {
-            HeaderBar()
-            HStack {
+        NavigationView {
+            VStack {
+                
                 CardView()
+
+                ProjectListView()
             }
-            ProjectListView()
+            .navigationBarTitle("Welcome")
+            .toolbar {
+
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
+                    //Notifications
+                    Button(action: {
+
+                    }, label: {
+                        Image(systemName: "heart")
+                            .foregroundColor(.black)
+                    })
+                    
+                    //Settings
+                    Button(action: {
+
+                    }, label: {
+                        Image(systemName: "person.crop.circle")
+                            .foregroundColor(.black)
+                    })
+
+                }
+            }
         }
     }
 }
