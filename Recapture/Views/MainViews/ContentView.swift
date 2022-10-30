@@ -9,32 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+
         TabView {
             HomeView()
                 .tabItem {
-                    Image(systemName: "cube.fill")
+                    Image(systemName: "rectangle.stack.fill")
                     Text("Project")
                 }
-            
+
             NotificationView()
                 .badge(9)
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Notification")
                 }
-            
+
             TutorialView()
                 .tabItem {
                     Image(systemName: "video.fill")
                     Text("Tutorials")
                 }
-            
-            SettingsView()
+
+            SettingsManager()
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "person.crop.circle.fill")
                     Text("Settings")
                 }
         }
+        
     }
 }
 

@@ -24,7 +24,6 @@ struct SettingsView: View {
             
             SettingsManager()
         }
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.949, green: 0.949, blue: 0.969)/*@END_MENU_TOKEN@*/)
     }
 }
 

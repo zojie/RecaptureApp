@@ -90,7 +90,7 @@ struct AccountView: View {
                         }
                     }
                 }
-             
+                
             }
             .navigationTitle("Manage account")
             .navigationBarTitleDisplayMode(.inline)
