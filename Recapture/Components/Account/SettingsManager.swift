@@ -64,7 +64,7 @@ struct SettingsManager: View {
                 HStack {
                     Text("Clear Cache")
                     Spacer()
-                    Image(systemName: "chevron.right")
+                    Image(systemName: "trash")
                         .foregroundColor(Color.gray)
                 }
             }
@@ -102,14 +102,6 @@ struct SettingsManager: View {
             //4TH SECTION
             Section {
                 
-                //Twitter community
-                HStack {
-                    Text("Join Twitter Community")
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(Color.gray)
-                }
-                
                 //Privacy Policy
                 HStack {
                     Text("Privacy Policy")
@@ -125,8 +117,15 @@ struct SettingsManager: View {
                     Image(systemName: "chevron.right")
                         .foregroundColor(Color.gray)
                 }
+                
+                //Twitter community
+                HStack {
+                    Text("Join Twitter Community")
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .foregroundColor(.blue)
+                }
             }
-            
         }
     }
 }

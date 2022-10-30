@@ -23,12 +23,8 @@ struct SettingsView: View {
             .padding()
             
             SettingsManager()
-//            Text("Recapture v1.0")
-//                .padding()
-//                .foregroundColor(.gray)
-//                .font(.callout)
-
         }
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.949, green: 0.949, blue: 0.969)/*@END_MENU_TOKEN@*/)
     }
 }
 

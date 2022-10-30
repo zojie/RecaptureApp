@@ -17,6 +17,7 @@ struct ContentView: View {
                 }
             
             NotificationView()
+                .badge(9)
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Notification")
