@@ -19,6 +19,7 @@
 		1F665E592906014300FE0BD6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E582906014300FE0BD6 /* LoginView.swift */; };
 		1F665E5B2906015000FE0BD6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E5A2906015000FE0BD6 /* SignupView.swift */; };
 		1F665E5D2906015D00FE0BD6 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F665E5C2906015D00FE0BD6 /* ForgotPasswordView.swift */; };
+		1F6B39482910524900574F39 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B39472910524900574F39 /* OnboardingView.swift */; };
 		1F7C2ED928FCD1C000972C3A /* RecaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C2ED828FCD1C000972C3A /* RecaptureApp.swift */; };
 		1F7C2EDB28FCD1C000972C3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C2EDA28FCD1C000972C3A /* ContentView.swift */; };
 		1F7C2EDD28FCD1C300972C3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7C2EDC28FCD1C300972C3A /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		1F665E582906014300FE0BD6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F665E5A2906015000FE0BD6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		1F665E5C2906015D00FE0BD6 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		1F6B39472910524900574F39 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1F7C2ED528FCD1C000972C3A /* Recapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7C2ED828FCD1C000972C3A /* RecaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecaptureApp.swift; sourceTree = "<group>"; };
 		1F7C2EDA28FCD1C000972C3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		1F665E53290600AA00FE0BD6 /* AuthViews */ = {
 			isa = PBXGroup;
 			children = (
+				1F6B39472910524900574F39 /* OnboardingView.swift */,
 				1F665E582906014300FE0BD6 /* LoginView.swift */,
 				1F665E5A2906015000FE0BD6 /* SignupView.swift */,
 				1F665E5C2906015D00FE0BD6 /* ForgotPasswordView.swift */,
@@ -445,6 +448,7 @@
 				1F8B5CE0290D3A2100D6EE25 /* TermsView.swift in Sources */,
 				1FF8860929017C840074656B /* Notifications.swift in Sources */,
 				1F2CFA0328FDB014007ADB05 /* HeaderBar.swift in Sources */,
+				1F6B39482910524900574F39 /* OnboardingView.swift in Sources */,
 				1F5A164E290F166A00F9B42C /* LanguageView.swift in Sources */,
 				1FF886002901647D0074656B /* CardView.swift in Sources */,
 				1FF8860F290180320074656B /* TutorialView.swift in Sources */,

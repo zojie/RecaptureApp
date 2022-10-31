@@ -15,7 +15,6 @@ struct LoginView: View {
     @State private var showLoginScreen = false
     
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading) {
 
                 VStack {
@@ -82,9 +81,9 @@ struct LoginView: View {
                 }
                 
             }
+            .navigationTitle("Login")
+            .navigationBarTitleDisplayMode(.large)
             .padding()
-        }
-        .navigationBarHidden(true)
     }
 }
 
