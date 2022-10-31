@@ -54,6 +54,7 @@ struct DomainView: View {
             }
             .navigationTitle("Domain")
             .navigationBarTitleDisplayMode(.inline)
+            .offset(y: 24)
         }
     }
 }

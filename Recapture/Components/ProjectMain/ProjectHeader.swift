@@ -16,15 +16,18 @@ struct ProjectHeader: View {
             } label: {
                 HStack(spacing: 20.0) {
                     Text ("Projects")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.callout)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color.blue)
                     Text ("Drafts")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.callout)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color.gray)
                 }
             }
+            .padding()
         
-        .padding()
+        
 
     }
 }

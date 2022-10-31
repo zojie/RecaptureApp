@@ -122,6 +122,8 @@ struct SubscriptionView: View {
             }
             .navigationTitle("Subscription")
             .navigationBarTitleDisplayMode(.inline)
+            .offset(y: 42)
+
         }
     }
 }

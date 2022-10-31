@@ -18,7 +18,7 @@ struct AccountView: View {
                 ZStack {
                     Circle()
                         .frame(width: 116.0, height: 116.0)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.gray)
                     Image(systemName: "person.fill")
                         .aspectRatio(contentMode: .fill)
                 }
@@ -39,7 +39,7 @@ struct AccountView: View {
                 //Forms
                 Form {
                     
-                    Section(header: Text("Edit account information")) {
+                    Section(header: Text("Edit account information"), footer: Text("If you decide to change your email, any outstanding subscription will be lost, you will be logged out immediately and a confirmation mail will be sent to your email address for verification.")) {
                         VStack(alignment: .leading) {
                             TextField("Ehizojie Ihayere", text: $fullname)
                             Text("Name")
@@ -94,6 +94,7 @@ struct AccountView: View {
             }
             .navigationTitle("Manage account")
             .navigationBarTitleDisplayMode(.inline)
+            .offset(y: 42)
             .toolbar {
 
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -106,7 +107,6 @@ struct AccountView: View {
 
                 }
             }
-
         }
     }
 }
