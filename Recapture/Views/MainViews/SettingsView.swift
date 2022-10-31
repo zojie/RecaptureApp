@@ -11,7 +11,7 @@ struct SettingsView: View {
     var body: some View {
         
             Form {
-                Section(header: Text("Account profile")) {
+                Section(header: Text("General")) {
                     //Account
                     HStack {
                         Text("Account")
@@ -38,36 +38,36 @@ struct SettingsView: View {
                 }
                 
                 //2ND Section
-                Section(header: Text("General")) {
+//                Section(header: Text("General")) {
                     
                     //Measure Units
-                    HStack {
-                        Text("Measure Units")
-                        Spacer()
-                        Text("Imperial")
-                            .foregroundColor(Color.gray)
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
+//                    HStack {
+//                        Text("Measure Units")
+//                        Spacer()
+//                        Text("Imperial")
+//                            .foregroundColor(Color.gray)
+//                        Image(systemName: "chevron.right")
+//                            .foregroundColor(Color.gray)
+//                    }
                     
                     //Video format
-                    HStack {
-                        Text("Video Format")
-                        Spacer()
-                        Text("Full HD @ 60 FPS")
-                            .foregroundColor(Color.gray)
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
+//                    HStack {
+//                        Text("Video Format")
+//                        Spacer()
+//                        Text("Full HD @ 60 FPS")
+//                            .foregroundColor(Color.gray)
+//                        Image(systemName: "chevron.right")
+//                            .foregroundColor(Color.gray)
+//                    }
                     
                     //Clear catche
-                    HStack {
-                        Text("Clear Cache")
-                        Spacer()
-                        Image(systemName: "trash")
-                            .foregroundColor(Color.gray)
-                    }
-                }
+//                    HStack {
+//                        Text("Clear Cache")
+//                        Spacer()
+//                        Image(systemName: "trash")
+//                            .foregroundColor(Color.gray)
+//                    }
+//                }
                 
                 //3RD SECTION
                 Section(header: Text("Help")) {
@@ -117,11 +117,31 @@ struct SettingsView: View {
                         Image(systemName: "chevron.right")
                             .foregroundColor(Color.gray)
                     }
+                }
+                
+                //5TH SECTION
+                Section(header: Text("About App")) {
                     
-                    //Latest version
+                    //Version
                     HStack {
                         Text("Recapture AR v1.0")
                             .foregroundColor(.gray)
+                    }
+                    
+                    //Creator
+                    HStack {
+                        Text("Created by Ehizojie Ihayere")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .foregroundColor(.blue)
+                    }
+                    
+                    //Learn more
+                    HStack {
+                        Text("Join Twitter Community")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .foregroundColor(.blue)
                     }
                     
                 }

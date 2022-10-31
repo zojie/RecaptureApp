@@ -20,6 +20,21 @@ struct HomeView: View {
             .offset(y: 16)
             .toolbar {
                 
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    
+                    Button(action: {
+
+                    }, label: {
+                        Image("AppLogo")
+                    })
+
+                    
+//                    NavigationLink(destination: TutorialView(), label: {
+//                        Image("AppLogo")
+//                    })
+//
+                }
+                
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
                     NavigationLink(destination: TutorialView(), label: {
