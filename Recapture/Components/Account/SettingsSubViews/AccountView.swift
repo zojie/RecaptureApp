@@ -94,21 +94,19 @@ struct AccountView: View {
             }
             .navigationTitle("Manage account")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
 
-        }
-        .toolbar {
-            
-            ToolbarItem(placement: .confirmationAction) {
-                Button("Done") {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+
+                    }, label: {
+                        Text("Done")
+                            .foregroundColor(.blue)
+                    })
 
                 }
             }
-            
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Cancel", role: .cancel) {
-                    
-                }
-            }
+
         }
     }
 }

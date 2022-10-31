@@ -16,30 +16,31 @@ struct HomeView: View {
 
                 ProjectListView()
             }
-            .navigationBarTitle("Welcome")
+            .navigationBarTitle("")
+            .offset(y: 16)
             .toolbar {
-
+                
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
-                    //Notifications
-                    Button(action: {
-
-                    }, label: {
-                        Image(systemName: "heart")
-                            .foregroundColor(.black)
+                    NavigationLink(destination: TutorialView(), label: {
+                        Image(systemName: "video")
+                            .foregroundColor(.blue)
                     })
                     
-                    //Settings
-                    Button(action: {
-
-                    }, label: {
-                        Image(systemName: "person.crop.circle")
-                            .foregroundColor(.black)
+                    NavigationLink(destination: NotificationView(), label: {
+                        Image(systemName: "heart")
+                            .foregroundColor(.blue)
                     })
-
+                    
+                    NavigationLink(destination: SettingsView(), label: {
+                        Image(systemName: "person")
+                            .foregroundColor(.blue)
+                    })
                 }
+
             }
         }
+        .accentColor(.blue)
     }
 }
 

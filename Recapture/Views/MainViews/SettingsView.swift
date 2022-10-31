@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         
-        NavigationView {
             Form {
                 Section(header: Text("Account profile")) {
                     //Account
@@ -128,8 +127,7 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
-        }
-
+            .navigationBarTitleDisplayMode(.large)
     }
 }
 

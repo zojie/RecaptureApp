@@ -9,7 +9,6 @@ import SwiftUI
 
 struct NotificationView: View {
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading) {
 //               VStack(alignment: .leading) {
 //                        Text("Notification")
@@ -26,7 +25,7 @@ struct NotificationView: View {
 
             }
             .navigationTitle("Notifications")
-        }
+            .navigationBarTitleDisplayMode(.large)
     }
 }
 

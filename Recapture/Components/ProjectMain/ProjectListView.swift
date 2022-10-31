@@ -56,7 +56,8 @@ struct ProjectListView: View {
                         .padding(.vertical)
                         
                         //More Options
-                        ProjectActions()
+                        Image(systemName: "ellipsis")
+                            .foregroundColor(.gray)
                     }
                 }
             }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TutorialView: View {
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading) {
 //                VStack(alignment: .leading) {
 //                    Text("Tutorials")
@@ -28,7 +27,7 @@ struct TutorialView: View {
                 }
             }
             .navigationTitle("Tutorials")
-        }
+            .navigationBarTitleDisplayMode(.large)
     }
 }
 

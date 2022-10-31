@@ -45,6 +45,18 @@ struct LanguageView: View {
             .listStyle(.plain)
             .navigationTitle("Select language")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+
+                    }, label: {
+                        Text("Done")
+                            .foregroundColor(.blue)
+                    })
+
+                }
+            }
          }
     }
 }
