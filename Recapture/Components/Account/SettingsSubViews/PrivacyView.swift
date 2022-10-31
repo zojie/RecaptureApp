@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PrivacyView: View {
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading, spacing: 16) {
                 Text("Paragraph 1")
                     .font(.title)
@@ -22,7 +21,6 @@ struct PrivacyView: View {
             .padding()
             .navigationTitle("Privacy")
             .navigationBarTitleDisplayMode(.inline)
-        }
     }
 }
 

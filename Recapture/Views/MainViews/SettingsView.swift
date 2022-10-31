@@ -10,157 +10,113 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         
-            Form {
-                Section(header: Text("General")) {
-                    //Account
-                    HStack {
-                        Text("Account")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
+        Form {
+            Section(header: Text("General")) {
+                //Account
+                NavigationLink(destination: AccountView(), label: {
+                    Text("Account")
                     
-                    //Domain
-                    HStack {
-                        Text("Domain")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
-                    
-                    //Subsciption
-                    HStack {
-                        Text("Subscription")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
-                }
+                })
                 
-                //2ND Section
-//                Section(header: Text("General")) {
-                    
-                    //Measure Units
-//                    HStack {
-//                        Text("Measure Units")
-//                        Spacer()
-//                        Text("Imperial")
-//                            .foregroundColor(Color.gray)
-//                        Image(systemName: "chevron.right")
-//                            .foregroundColor(Color.gray)
-//                    }
-                    
-                    //Video format
-//                    HStack {
-//                        Text("Video Format")
-//                        Spacer()
-//                        Text("Full HD @ 60 FPS")
-//                            .foregroundColor(Color.gray)
-//                        Image(systemName: "chevron.right")
-//                            .foregroundColor(Color.gray)
-//                    }
-                    
-                    //Clear catche
-//                    HStack {
-//                        Text("Clear Cache")
-//                        Spacer()
-//                        Image(systemName: "trash")
-//                            .foregroundColor(Color.gray)
-//                    }
-//                }
                 
-                //3RD SECTION
-                Section(header: Text("Help")) {
-                    
-                    //Tutorials
-                    HStack {
-                        Text("Tutorials")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
-                    
-                    //Language
-                    HStack {
-                        Text("Language")
-                        Spacer()
-                        Text("English")
-                            .foregroundColor(Color.gray)
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
-                    
-                    //Contact Support
-                    HStack {
-                        Text("Contact Support")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
-                }
+                //Domain
+                NavigationLink(destination: DomainView(), label: {
+                    Text("Domain")
+                })
                 
-                //4TH SECTION
-                Section(header: Text("Legal")) {
-                    
-                    //Privacy Policy
-                    HStack {
-                        Text("Privacy Policy")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
-                    
-                    //Terms of service
-                    HStack {
-                        Text("Terms of Service")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.gray)
-                    }
-                }
-                
-                //5TH SECTION
-                Section(header: Text("About App")) {
-                    
-                    //Version
-                    HStack {
-                        Text("Recapture AR v1.0")
-                            .foregroundColor(.gray)
-                    }
-                    
-                    //Creator
-                    HStack {
-                        Text("Created by Ehizojie Ihayere")
-                        Spacer()
-                        Image(systemName: "arrow.up.right")
-                            .foregroundColor(.blue)
-                    }
-                    
-                    //Blog
-                    HStack {
-                        Text("Visit our Blog")
-                        Spacer()
-                        Image(systemName: "arrow.up.right")
-                            .foregroundColor(.blue)
-                    }
-                    
-                    //Learn more
-                    HStack {
-                        Text("Join Twitter Community")
-                        Spacer()
-                        Image(systemName: "arrow.up.right")
-                            .foregroundColor(.blue)
-                    }
-                    
-                }
+                //Subsciption
+                NavigationLink(destination: SubscriptionView(), label: {
+                    Text("Subscription")
+                })
             }
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.large)
+            
+            //2ND SECTION
+            Section(header: Text("Help")) {
+                
+                //Tutorials
+                NavigationLink(destination: TutorialView(), label: {
+                    Text("Tutorials")
+                })
+                
+                //Language
+                HStack {
+                    Text("Language")
+                    Spacer()
+                    Text("English")
+                        .foregroundColor(Color.gray)
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.gray)
+                }
+                
+                //Contact Support
+                NavigationLink(destination: SupportView(), label: {
+                    Text("Support")
+                })
+                
+            }
+            
+            //3RD SECTION
+            Section(header: Text("Legal")) {
+                
+                //Privacy Policy
+                NavigationLink(destination: PrivacyView(), label: {
+                    Text("Privacy Policy")
+                })
+                
+                
+                //Terms of service
+                NavigationLink(destination: TermsView(), label: {
+                    Text("Terms of Use")
+                })
+                
+            }
+            
+            //4TH SECTION
+            Section(header: Text("About App")) {
+                
+                //Version
+                HStack {
+                    Text("Recapture AR v1.0")
+                        .foregroundColor(.gray)
+                }
+                
+                //Creator
+                HStack {
+                    Text("Created by Ehizojie Ihayere")
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .foregroundColor(.blue)
+                }
+                
+                //Blog
+                HStack {
+                    Text("Visit our Blog")
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .foregroundColor(.blue)
+                }
+                
+                //Learn more
+                HStack {
+                    Text("Join Twitter Community")
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .foregroundColor(.blue)
+                }
+                
+            }
+        }
+        .navigationTitle("Settings")
+        .navigationBarTitleDisplayMode(.large)
+        .accentColor(.blue)
+        
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        NavigationView {
+            SettingsView()
+        }
     }
 }

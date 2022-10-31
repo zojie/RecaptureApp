@@ -11,7 +11,6 @@ struct DomainView: View {
     @State private var domain = ""
     
     var body: some View {
-        NavigationView {
             VStack(spacing: 42.0) {
                 VStack(alignment: .leading) {
                     Text("Connect your domain")
@@ -55,7 +54,6 @@ struct DomainView: View {
             .navigationTitle("Domain")
             .navigationBarTitleDisplayMode(.inline)
             .offset(y: 24)
-        }
     }
 }
 

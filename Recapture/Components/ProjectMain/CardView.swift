@@ -20,13 +20,16 @@ struct CardViewBlock: View {
     var body: some View {
         
 //        Add new project card
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 16) {
             Image(systemName: "plus")
                 .font(.system(size: 24, weight: .medium))
-            Text("New Project")
-                .font(.headline)
+            VStack(alignment: .leading, spacing: 8) {
+                Text("New Project")
+                    .font(.headline)
                 .fontWeight(.bold)
-            Text("Create new AR model with only your camera")
+                Text("Create new AR model with only your camera")
+            }
+            
         }
         .foregroundColor(.white)
         .padding()

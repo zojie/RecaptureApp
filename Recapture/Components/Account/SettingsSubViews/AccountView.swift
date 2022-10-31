@@ -11,7 +11,6 @@ struct AccountView: View {
     @State private var fullname = ""
     
     var body: some View {
-        NavigationView {
             VStack {
                 
                 //Profile image
@@ -94,7 +93,7 @@ struct AccountView: View {
             }
             .navigationTitle("Manage account")
             .navigationBarTitleDisplayMode(.inline)
-            .offset(y: 42)
+            .offset(y: 16)
             .toolbar {
 
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -107,7 +106,6 @@ struct AccountView: View {
 
                 }
             }
-        }
     }
 }
 

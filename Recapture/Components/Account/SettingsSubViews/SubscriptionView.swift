@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SubscriptionView: View {
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Billed Monthly")
                     .fontWeight(.semibold)
@@ -124,7 +123,6 @@ struct SubscriptionView: View {
             .navigationBarTitleDisplayMode(.inline)
             .offset(y: 42)
 
-        }
     }
 }
 

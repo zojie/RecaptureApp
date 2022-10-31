@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SupportView: View {
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading) {
 //                Text("We love feedbacks")
 //                    .font(.headline)
@@ -60,7 +59,7 @@ struct SupportView: View {
                 .navigationTitle("Support")
                 .navigationBarTitleDisplayMode(.inline)
             }
-        }
+            .offset(y: 24)
     }
 }
 

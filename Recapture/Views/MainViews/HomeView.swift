@@ -13,7 +13,7 @@ struct HomeView: View {
             VStack {
                 
                 CardView()
-
+                
                 ProjectListView()
             }
             .navigationBarTitle("")
@@ -23,16 +23,10 @@ struct HomeView: View {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
                     
                     Button(action: {
-
+                        
                     }, label: {
                         Image("AppLogo")
                     })
-
-                    
-//                    NavigationLink(destination: TutorialView(), label: {
-//                        Image("AppLogo")
-//                    })
-//
                 }
                 
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -52,7 +46,7 @@ struct HomeView: View {
                             .foregroundColor(.blue)
                     })
                 }
-
+                
             }
         }
         .accentColor(.blue)
