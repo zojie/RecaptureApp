@@ -136,6 +136,14 @@ struct SettingsView: View {
                             .foregroundColor(.blue)
                     }
                     
+                    //Blog
+                    HStack {
+                        Text("Visit our Blog")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .foregroundColor(.blue)
+                    }
+                    
                     //Learn more
                     HStack {
                         Text("Join Twitter Community")

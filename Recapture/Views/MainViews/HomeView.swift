@@ -38,7 +38,7 @@ struct HomeView: View {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
                     NavigationLink(destination: TutorialView(), label: {
-                        Image(systemName: "video")
+                        Image(systemName: "questionmark.circle")
                             .foregroundColor(.blue)
                     })
                     

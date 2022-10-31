@@ -10,7 +10,7 @@ import SwiftUI
 struct ProjectHeader: View {
     var body: some View {
         
-            //Projects
+            //Bars
             Button {
                 //Do something here
             } label: {
