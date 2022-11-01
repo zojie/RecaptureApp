@@ -11,7 +11,30 @@ struct SettingsView: View {
     var body: some View {
         
         Form {
+            
+            Section {
+                
+                NavigationLink(destination: ProfilePhotoView(), label: {
+                    HStack {
+                        Image("OnboardingImage")
+                            .frame(width: 56, height: 56)
+                            .mask(Circle())
+                        
+                        VStack(alignment: .leading){
+                            Text("Profile Photo")
+                                .fontWeight(.medium)
+                            Text("Tap to edit yor profile photo")
+                                .font(.callout)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    
+                })
+                
+            }
+            
             Section(header: Text("General")) {
+                
                 //Account
                 NavigationLink(destination: AccountView(), label: {
                     Text("Account")
