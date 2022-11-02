@@ -43,6 +43,15 @@
 		1FF8860D290180170074656B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8860C290180170074656B /* SettingsView.swift */; };
 		1FF8860F290180320074656B /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8860E290180320074656B /* TutorialView.swift */; };
 		1FF8861329018BA90074656B /* HelpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8861229018BA90074656B /* HelpBar.swift */; };
+		1FFCBD232912938C00F6A6D5 /* TextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD222912938C00F6A6D5 /* TextEditView.swift */; };
+		1FFCBD252912939F00F6A6D5 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD242912939F00F6A6D5 /* QRCodeView.swift */; };
+		1FFCBD27291293B300F6A6D5 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD26291293B300F6A6D5 /* AnalyticsView.swift */; };
+		1FFCBD29291293C300F6A6D5 /* WebLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD28291293C300F6A6D5 /* WebLinkView.swift */; };
+		1FFCBD2B291293D300F6A6D5 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD2A291293D300F6A6D5 /* ExportView.swift */; };
+		1FFCBD2D2912A1F900F6A6D5 /* ProjectInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD2C2912A1F900F6A6D5 /* ProjectInfoView.swift */; };
+		1FFCBD2F2912A6E000F6A6D5 /* CaptureARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD2E2912A6E000F6A6D5 /* CaptureARView.swift */; };
+		1FFCBD312912A70600F6A6D5 /* ReviewCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD302912A70600F6A6D5 /* ReviewCapture.swift */; };
+		1FFCBD332912A73000F6A6D5 /* ProcessCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCBD322912A73000F6A6D5 /* ProcessCapture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +111,15 @@
 		1FF8860C290180170074656B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1FF8860E290180320074656B /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		1FF8861229018BA90074656B /* HelpBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpBar.swift; sourceTree = "<group>"; };
+		1FFCBD222912938C00F6A6D5 /* TextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditView.swift; sourceTree = "<group>"; };
+		1FFCBD242912939F00F6A6D5 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		1FFCBD26291293B300F6A6D5 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		1FFCBD28291293C300F6A6D5 /* WebLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLinkView.swift; sourceTree = "<group>"; };
+		1FFCBD2A291293D300F6A6D5 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		1FFCBD2C2912A1F900F6A6D5 /* ProjectInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInfoView.swift; sourceTree = "<group>"; };
+		1FFCBD2E2912A6E000F6A6D5 /* CaptureARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureARView.swift; sourceTree = "<group>"; };
+		1FFCBD302912A70600F6A6D5 /* ReviewCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCapture.swift; sourceTree = "<group>"; };
+		1FFCBD322912A73000F6A6D5 /* ProcessCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessCapture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +153,7 @@
 				1F665E57290600F100FE0BD6 /* SplashAndWelcomeViews */,
 				1F665E53290600AA00FE0BD6 /* AuthViews */,
 				1F665E56290600D800FE0BD6 /* MainViews */,
+				1FFCBD1F291292B200F6A6D5 /* CreationViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +337,38 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		1FFCBD1F291292B200F6A6D5 /* CreationViews */ = {
+			isa = PBXGroup;
+			children = (
+				1FFCBD212912930B00F6A6D5 /* MainCreationViews */,
+				1FFCBD20291292E600F6A6D5 /* SubCreationView */,
+			);
+			path = CreationViews;
+			sourceTree = "<group>";
+		};
+		1FFCBD20291292E600F6A6D5 /* SubCreationView */ = {
+			isa = PBXGroup;
+			children = (
+				1FFCBD222912938C00F6A6D5 /* TextEditView.swift */,
+				1FFCBD242912939F00F6A6D5 /* QRCodeView.swift */,
+				1FFCBD26291293B300F6A6D5 /* AnalyticsView.swift */,
+				1FFCBD28291293C300F6A6D5 /* WebLinkView.swift */,
+				1FFCBD2A291293D300F6A6D5 /* ExportView.swift */,
+				1FFCBD2C2912A1F900F6A6D5 /* ProjectInfoView.swift */,
+			);
+			path = SubCreationView;
+			sourceTree = "<group>";
+		};
+		1FFCBD212912930B00F6A6D5 /* MainCreationViews */ = {
+			isa = PBXGroup;
+			children = (
+				1FFCBD2E2912A6E000F6A6D5 /* CaptureARView.swift */,
+				1FFCBD302912A70600F6A6D5 /* ReviewCapture.swift */,
+				1FFCBD322912A73000F6A6D5 /* ProcessCapture.swift */,
+			);
+			path = MainCreationViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -448,17 +499,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFCBD2F2912A6E000F6A6D5 /* CaptureARView.swift in Sources */,
 				1F8B5CE0290D3A2100D6EE25 /* TermsView.swift in Sources */,
 				1FF8860929017C840074656B /* Notifications.swift in Sources */,
 				1F2CFA0328FDB014007ADB05 /* HeaderBar.swift in Sources */,
+				1FFCBD252912939F00F6A6D5 /* QRCodeView.swift in Sources */,
 				1F6B39482910524900574F39 /* OnboardingView.swift in Sources */,
 				1F5A164E290F166A00F9B42C /* LanguageView.swift in Sources */,
 				1FF886002901647D0074656B /* CardView.swift in Sources */,
+				1FFCBD29291293C300F6A6D5 /* WebLinkView.swift in Sources */,
 				1FF8860F290180320074656B /* TutorialView.swift in Sources */,
+				1FFCBD332912A73000F6A6D5 /* ProcessCapture.swift in Sources */,
 				1F8B5CD7290D39BD00D6EE25 /* SubscriptionView.swift in Sources */,
 				1F8B5CD9290D39E900D6EE25 /* SupportView.swift in Sources */,
 				1F8B5CD5290D39B000D6EE25 /* DomainView.swift in Sources */,
 				1F8B5CDE290D3A1100D6EE25 /* PrivacyView.swift in Sources */,
+				1FFCBD2D2912A1F900F6A6D5 /* ProjectInfoView.swift in Sources */,
+				1FFCBD312912A70600F6A6D5 /* ReviewCapture.swift in Sources */,
 				1F665E322904A8C000FE0BD6 /* ProjectActions.swift in Sources */,
 				1FF88603290170D10074656B /* ProjectView.swift in Sources */,
 				1FF8860729017C5B0074656B /* NotificationView.swift in Sources */,
@@ -467,15 +524,18 @@
 				1F665E342904AA8800FE0BD6 /* ProjectData.swift in Sources */,
 				1F4761A22911C067005CDF11 /* ProfilePhotoView.swift in Sources */,
 				1FF8860D290180170074656B /* SettingsView.swift in Sources */,
+				1FFCBD232912938C00F6A6D5 /* TextEditView.swift in Sources */,
 				1F8B5CD2290D398D00D6EE25 /* AccountView.swift in Sources */,
 				1F7C2EE528FCD1C300972C3A /* Recapture.xcdatamodeld in Sources */,
 				1F665E5D2906015D00FE0BD6 /* ForgotPasswordView.swift in Sources */,
 				1F7C2EDB28FCD1C000972C3A /* ContentView.swift in Sources */,
+				1FFCBD27291293B300F6A6D5 /* AnalyticsView.swift in Sources */,
 				1FF8861329018BA90074656B /* HelpBar.swift in Sources */,
 				1F665E592906014300FE0BD6 /* LoginView.swift in Sources */,
 				1F2CF9FC28FD9978007ADB05 /* HomeView.swift in Sources */,
 				1F5A1652290F38D600F9B42C /* ToolBarTest.swift in Sources */,
 				1F2CF9FE28FD9FE3007ADB05 /* ProjectListView.swift in Sources */,
+				1FFCBD2B291293D300F6A6D5 /* ExportView.swift in Sources */,
 				1F665E382904B6E100FE0BD6 /* ProjectHeader.swift in Sources */,
 				1F665E5B2906015000FE0BD6 /* SignupView.swift in Sources */,
 				1F7C2ED928FCD1C000972C3A /* RecaptureApp.swift in Sources */,

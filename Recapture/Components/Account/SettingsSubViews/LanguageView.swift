@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LanguageView: View {
     var body: some View {
-        NavigationView {
+        
             List {
                 
                 //English
@@ -57,7 +57,6 @@ struct LanguageView: View {
 
                 }
             }
-         }
     }
 }
 

@@ -37,7 +37,7 @@ struct HomeView: View {
                     })
                     
                     NavigationLink(destination: NotificationView(), label: {
-                        Image(systemName: "heart")
+                        Image(systemName: "bell")
                             .foregroundColor(.blue)
                     })
                     

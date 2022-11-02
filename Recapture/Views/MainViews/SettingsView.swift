@@ -17,7 +17,7 @@ struct SettingsView: View {
                 NavigationLink(destination: ProfilePhotoView(), label: {
                     HStack {
                         Image("OnboardingImage")
-                            .frame(width: 56, height: 56)
+                            .frame(width: 56.0, height: 56.0)
                             .mask(Circle())
                         
                         VStack(alignment: .leading){
@@ -62,14 +62,14 @@ struct SettingsView: View {
                 })
                 
                 //Language
-                HStack {
-                    Text("Language")
-                    Spacer()
-                    Text("English")
-                        .foregroundColor(Color.gray)
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(Color.gray)
-                }
+                NavigationLink(destination: LanguageView(), label: {
+                    HStack {
+                        Text("Language")
+                        Spacer()
+                        Text("English")
+                            .foregroundColor(Color.gray)
+                    }
+                })
                 
                 //Contact Support
                 NavigationLink(destination: SupportView(), label: {
