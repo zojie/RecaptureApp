@@ -25,6 +25,24 @@ struct CaptureARView: View {
                         .foregroundColor(.gray)
                 }
         )
+            
+            //Test toolbar
+            .toolbar {
+                
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
+                    NavigationLink(destination: NotificationView(), label: {
+                        Image(systemName: "bell")
+                            .foregroundColor(.blue)
+                    })
+                    
+                    NavigationLink(destination: SettingsView(), label: {
+                        Image(systemName: "person")
+                            .foregroundColor(.blue)
+                    })
+                }
+                
+            }
         }
     }
 }
