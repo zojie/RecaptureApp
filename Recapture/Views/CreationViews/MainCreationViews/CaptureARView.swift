@@ -23,7 +23,6 @@ struct CaptureARView: View {
                     Text("January 12, 2022 15:32")
                         .font(.callout)
                         .foregroundColor(.gray)
-                
                 }
         )
         }
