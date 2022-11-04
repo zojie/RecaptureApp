@@ -10,12 +10,12 @@ import SwiftUI
 struct ProjectActions: View {
     var body: some View {
         Menu {
-            
-            //Delete
-            Button(role: .destructive) {
+                        
+            //Share
+            Button {
                 //Do something here
             } label: {
-                Label("Delete", systemImage: "trash")
+                Label("Share", systemImage: "square.and.arrow.up")
             }
             
             //Web Link
@@ -60,11 +60,11 @@ struct ProjectActions: View {
                 Label("Get Info", systemImage: "info.circle")
             }
             
-            //Share
-            Button {
+            //Delete
+            Button(role: .destructive) {
                 //Do something here
             } label: {
-                Label("Share", systemImage: "square.and.arrow.up")
+                Label("Delete", systemImage: "trash")
             }
           
             

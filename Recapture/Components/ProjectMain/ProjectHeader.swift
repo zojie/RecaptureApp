@@ -10,21 +10,24 @@ import SwiftUI
 struct ProjectHeader: View {
     var body: some View {
         
-            //Projects
+            //Bars
             Button {
                 //Do something here
             } label: {
                 HStack(spacing: 20.0) {
                     Text ("Projects")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.callout)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color.blue)
                     Text ("Drafts")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.callout)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color.gray)
                 }
             }
+            .padding()
         
-        .padding()
+        
 
     }
 }

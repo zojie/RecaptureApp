@@ -27,7 +27,7 @@ struct ProjectListView: View {
                             .cornerRadius(12)
                         
                         //Project Details
-                        VStack(alignment: .leading, spacing: 4.0) {
+                        VStack(alignment: .leading, spacing: 4) {
                             Text("Full name of project with a max of two lines and more, i want it auto truncated into two lines")
                                 .font(.body)
                                 .fontWeight(.semibold)
@@ -45,7 +45,7 @@ struct ProjectListView: View {
                             .foregroundColor(.gray)
                             
                             
-                            HStack(spacing: 4.0) {
+                            HStack(spacing: 4) {
                                 Text ("18MB")
                                 Text ("•")
                                 Text ("42 Images")
@@ -56,7 +56,8 @@ struct ProjectListView: View {
                         .padding(.vertical)
                         
                         //More Options
-                        ProjectActions()
+                        Image(systemName: "ellipsis")
+                            .foregroundColor(.gray)
                     }
                 }
             }

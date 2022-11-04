@@ -20,13 +20,16 @@ struct CardViewBlock: View {
     var body: some View {
         
 //        Add new project card
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 16) {
             Image(systemName: "plus")
                 .font(.system(size: 24, weight: .medium))
-            Text("New Project")
-                .font(.system(size: 18, weight: .bold))
-            Text("Transform multiple images to an AR model")
-                .font(.system(size: 16, weight: .regular))
+            VStack(alignment: .leading, spacing: 8) {
+                Text("New Project")
+                    .font(.headline)
+                .fontWeight(.bold)
+                Text("Create new AR model with only your camera")
+            }
+            
         }
         .foregroundColor(.white)
         .padding()
@@ -42,12 +45,12 @@ struct CardViewBlock: View {
 //        Other card
         VStack(alignment: .leading, spacing: 8) {
             Text("30")
-                .font(.system(size: 24, weight: .medium))
-                .fontWeight(.semibold)
+                .font(.title3)
+                .fontWeight(.bold)
             Text("Projects created")
-                .font(.system(size: 15, weight: .regular))
             Text("MASTER")
-                .font(.system(size: 11, weight: .semibold))
+                .font(.caption)
+                .fontWeight(.semibold)
         }
         .foregroundColor(.white)
         .padding(4.0)

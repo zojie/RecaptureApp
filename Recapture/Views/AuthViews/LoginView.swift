@@ -15,28 +15,8 @@ struct LoginView: View {
     @State private var showLoginScreen = false
     
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading) {
-                
-                VStack(alignment: .leading, spacing: 32.0) {
-                    Image(systemName: "chevron.left")
-                        .frame(width:10.36, height: 18)
-                    VStack(alignment: .leading) {
-                        Text("Welcome")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.gray)
 
-                        Text("Login to your account")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                    }
-                    
-                }
-                
-                
-                Spacer()
-                
                 VStack {
                     TextField("Email", text: $email)
                         .padding()
@@ -101,9 +81,9 @@ struct LoginView: View {
                 }
                 
             }
+            .navigationTitle("Login")
+            .navigationBarTitleDisplayMode(.large)
             .padding()
-        }
-        .navigationBarHidden(true)
     }
 }
 

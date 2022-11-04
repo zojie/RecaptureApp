@@ -9,13 +9,47 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack(spacing:16) {
-            HeaderBar()
-            HStack {
+        NavigationView {
+            VStack {
+                
                 CardView()
+                
+                ProjectListView()
             }
-            ProjectListView()
+            .navigationBarTitle("")
+            .offset(y: 16)
+            .toolbar {
+                
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Image("AppLogo")
+                    })
+                }
+                
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
+                    NavigationLink(destination: TutorialView(), label: {
+                        Image(systemName: "questionmark.circle")
+                            .foregroundColor(.blue)
+                    })
+                    
+                    NavigationLink(destination: NotificationView(), label: {
+                        Image(systemName: "bell")
+                            .foregroundColor(.blue)
+                    })
+                    
+                    NavigationLink(destination: SettingsView(), label: {
+                        Image(systemName: "person")
+                            .foregroundColor(.blue)
+                    })
+                }
+                
+            }
         }
+        .accentColor(.blue)
     }
 }
 

@@ -11,10 +11,16 @@ struct HeaderBar: View {
     
     var body: some View {
         VStack(alignment: .trailing) {
-            Text ("Upgrade Plan")
-                .font(.system(size: 15, weight: .regular))
-                .foregroundColor(Color.blue)
-                .padding()
+            
+            //Upgrade
+            Button {
+                //Do something here
+            } label: {
+                Text ("Upgrade Plan")
+                    .foregroundColor(Color.blue)
+                    .padding()
+                    
+            }
             
             
             HStack {
@@ -32,7 +38,6 @@ struct HeaderBar: View {
                 Image(systemName: "person.fill")
                     .frame(width: 56, height: 56)
                     .background(Color(#colorLiteral(red: 0.886274516582489, green: 0.886274516582489, blue: 0.8980392217636108, alpha: 1)))
-                    .cornerRadius(12)
                     .mask(Circle())
             }
             .padding()
