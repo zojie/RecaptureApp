@@ -9,7 +9,24 @@ import SwiftUI
 
 struct CaptureARView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("Help")
+            }
+            .navigationBarItems(leading:
+                VStack(alignment: .leading) {
+                    Text("SwiftUI")
+                        .fontWeight(.semibold)
+                    Text("Subtitle")
+                        .font(.callout)
+                        .foregroundColor(.gray)
+                    Text("January 12, 2022 15:32")
+                        .font(.callout)
+                        .foregroundColor(.gray)
+                
+                }
+        )
+        }
     }
 }
 
