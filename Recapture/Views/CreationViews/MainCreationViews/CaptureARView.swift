@@ -9,40 +9,44 @@ import SwiftUI
 
 struct CaptureARView: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Help")
-            }
-            .navigationBarItems(leading:
-                VStack(alignment: .leading) {
-                    Text("SwiftUI")
-                        .fontWeight(.semibold)
-                    Text("Subtitle")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                    Text("January 12, 2022 15:32")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                }
-        )
+        
+        VStack {
             
-            //Test toolbar
-            .toolbar {
-                
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    
-                    NavigationLink(destination: NotificationView(), label: {
-                        Image(systemName: "bell")
-                            .foregroundColor(.blue)
-                    })
-                    
-                    NavigationLink(destination: SettingsView(), label: {
-                        Image(systemName: "person")
-                            .foregroundColor(.blue)
-                    })
-                }
-                
+            Spacer()
+            BottomActionView()
+            
+        }
+        .navigationBarItems(leading:
+                                VStack(alignment: .leading, spacing: 4) {
+            Text("Title name of project")
+                .fontWeight(.semibold)
+            HStack(spacing: 4) {
+                Text ("18MB")
+                Text ("•")
+                Text ("42 Images")
             }
+            .font(.callout)
+            .foregroundColor(.gray)
+            
+        }
+        )
+        
+        //Test toolbar
+        .toolbar {
+            
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                
+                NavigationLink(destination: NotificationView(), label: {
+                    Image(systemName: "ellipsis")
+                        .foregroundColor(.blue)
+                })
+                
+                NavigationLink(destination: SettingsView(), label: {
+                    Image(systemName: "trash")
+                        .foregroundColor(.red)
+                })
+            }
+            
         }
     }
 }

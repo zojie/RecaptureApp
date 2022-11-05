@@ -19,18 +19,23 @@ struct CardView: View {
 struct CardViewBlock: View {
     var body: some View {
         
-//        Add new project card
-        VStack(alignment: .leading, spacing: 16) {
-            Image(systemName: "plus")
-                .font(.system(size: 24, weight: .medium))
-            VStack(alignment: .leading, spacing: 8) {
-                Text("New Project")
-                    .font(.headline)
-                .fontWeight(.bold)
-                Text("Create new AR model with only your camera")
-            }
+        //        Add new project card
+        
+        Button(action: {
             
-        }
+        }, label: {
+            NavigationLink(destination: CaptureARView()) {
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Image(systemName: "plus")
+                        .font(.system(size: 24, weight: .medium))
+                    Text("New Project")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    Text("Create new AR model with only your camera")
+                }
+            }
+        })
         .foregroundColor(.white)
         .padding()
         .frame(width: 212, height: 162)
@@ -42,7 +47,7 @@ struct CardViewBlock: View {
             endPoint: UnitPoint(x: 0.7890624911997284, y: 0.8281249745741668)))
         .cornerRadius(12)
         
-//        Other card
+        //        Other card
         VStack(alignment: .leading, spacing: 8) {
             Text("30")
                 .font(.title3)
