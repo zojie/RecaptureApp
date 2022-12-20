@@ -10,44 +10,32 @@ import SwiftUI
 struct CaptureARView: View {
     var body: some View {
         
-        VStack {
+        //Bottom Capturing
+        VStack{
             
             Spacer()
-            BottomActionView()
-            
+            CaptureControls()
+      
         }
-        .navigationBarItems(leading:
-                                VStack(alignment: .leading, spacing: 4) {
-            Text("Title name of project")
-                .fontWeight(.semibold)
-            HStack(spacing: 4) {
-                Text ("18MB")
-                Text ("•")
-                Text ("42 Images")
-            }
-            .font(.callout)
-            .foregroundColor(.gray)
-            
-        }
-        )
-        
-        //Test toolbar
+        .navigationBarTitle("")
         .toolbar {
             
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 
-                NavigationLink(destination: NotificationView(), label: {
-                    Image(systemName: "ellipsis")
+                NavigationLink(destination: TutorialView(), label: {
+                    Image(systemName: "bolt.circle")
                         .foregroundColor(.blue)
                 })
                 
-                NavigationLink(destination: SettingsView(), label: {
-                    Image(systemName: "trash")
-                        .foregroundColor(.red)
+                NavigationLink(destination: NotificationView(), label: {
+                    Image(systemName: "info.circle")
+                        .foregroundColor(.blue)
                 })
+                
             }
             
         }
+
     }
 }
 

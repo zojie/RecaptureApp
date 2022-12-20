@@ -7,122 +7,124 @@
 
 import SwiftUI
 
+let backgroundGradient = LinearGradient(
+    colors: [Color(#colorLiteral(red: 0.2549019753932953, green: 0.33725491166114807, blue: 0.4431372582912445, alpha: 1)), Color(#colorLiteral(red: 0.07058823853731155, green: 0.1764705926179886, blue: 0.30980393290519714, alpha: 1))],
+    startPoint: .top, endPoint: .bottom)
+
 struct SubscriptionView: View {
     var body: some View {
-            VStack(alignment: .leading, spacing: 24) {
-                Text("Billed Monthly")
-                    .fontWeight(.semibold)
-                
-                //Free plan card
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("Free Plan")
-                        .fontWeight(.semibold)
-                    HStack {
-                        Text("$0")
-                            .font(.title)
-                            .fontWeight(.bold)
-                        Text("Active plan")
-                            .font(.callout)
-                            .frame(width: 96, height: 24)
-                            .background(.white .opacity(0.4))
-                            .cornerRadius(4)
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("2 Projects")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("QR Code")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("Text Points")
-                        Spacer()
-                    }
-                }
-                .padding()
-                .foregroundColor(.white)
-                .frame(width: 343, height: 224)
-                .background(.yellow)
-                .cornerRadius(12)
-                
-                
-                //Paid plan card
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("Pro Plan")
-                        .fontWeight(.semibold)
-                    HStack {
-                        Text("$59")
-                            .font(.title)
-                            .fontWeight(.bold)
-                    }
-                    Text("Everything in free plus")
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("Unlimited projects")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("Analytics")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("Text Points")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("Custom QR Codes")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("Embed Web Links")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                        Text("Custom Domain")
-                        Spacer()
-                    }
-                    Button("Get started 7 days free trial") {
-                        //Do something here
-                    }
-                    .foregroundColor(.black)
-                    .frame(width: 310, height: 50)
-                    .background(.white)
-                    .cornerRadius(10)
+        ZStack {
+            
+            backgroundGradient
+            
+            VStack(alignment: .center, spacing: 24) {
+                    Text("Upgrade to Pro")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
                     
+                    VStack(alignment: .leading, spacing: 16) {
+                        
+                        HStack {
+                            Image(systemName: "rectangle.stack.fill")
+                                .frame(width: 42.0, height: 42.0)
+                                .background(.white .opacity(0.2))
+                                .mask(Circle())
+                            VStack(alignment: .leading) {
+                                Text("Unlimited Projects")
+                                    .fontWeight(.semibold)
+                                Text("Create unlimited project and create more realities.")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "chart.bar.fill")
+                                .frame(width: 42.0, height: 42.0)
+                                .background(.white .opacity(0.2))
+                                .mask(Circle())
+                            VStack(alignment: .leading) {
+                                Text("Analytics")
+                                    .fontWeight(.semibold)
+                                Text("Create unlimited project and create more realities.")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "link")
+                                .frame(width: 42.0, height: 42.0)
+                                .background(.white .opacity(0.2))
+                                .mask(Circle())
+                            VStack(alignment: .leading) {
+                                Text("Custom Domains")
+                                    .fontWeight(.semibold)
+                                Text("Create unlimited project and create more realities.")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "square.and.arrow.up.fill")
+                                .frame(width: 42.0, height: 42.0)
+                                .background(.white .opacity(0.2))
+                                .mask(Circle())
+                            VStack(alignment: .leading) {
+                                Text("Export")
+                                    .fontWeight(.semibold)
+                                Text("Create unlimited project and create more realities.")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "qrcode")
+                                .frame(width: 42.0, height: 42.0)
+                                .background(.white .opacity(0.2))
+                                .mask(Circle())
+                            VStack(alignment: .leading) {
+                                Text("Custom QR Codes")
+                                    .fontWeight(.semibold)
+                                Text("Create unlimited project and create more realities.")
+                            }
+                        }
+                        
+                        
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("Monthly")
+                                    .fontWeight(.semibold)
+                                Text("Save 44%")
+                            }
+                            Spacer()
+                            Text("$59")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                        }
+                        .padding()
+                        .frame(width: 342, height: 64)
+                        .border(.gray, width: 2)
+                        .cornerRadius(10)
+                        
+                        
+                        Button("Subscribe Now") {
+                            //Do something here
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 342, height: 50)
+                        .background(.blue)
+                        .cornerRadius(10)
+                        
+                        Button("Restore Subscription") {
+                            //Do something here
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 342, height: 50)
+                        .cornerRadius(10)
+                    }
+                    .foregroundColor(.white)
                 }
-                .foregroundColor(.white)
-                .padding()
-                .frame(width: 343, height: 436)
-                .background(LinearGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: Color(#colorLiteral(red: 0, green: 0.47843137383461, blue: 1, alpha: 1)), location: 0),
-                        .init(color: Color(#colorLiteral(red: 0.5607843399047852, green: 0, blue: 0.9333333373069763, alpha: 1)), location: 1)]),
-                    startPoint: UnitPoint(x: 0.062499975840183686, y: 0.07031251435910296),
-                    endPoint: UnitPoint(x: 0.7890624911997284, y: 0.8281249745741668)))
-                .cornerRadius(12)
-            }
-            .navigationTitle("Subscription")
-            .navigationBarTitleDisplayMode(.inline)
-            .offset(y: 42)
-
+                .navigationTitle("Subscription")
+                .navigationBarTitleDisplayMode(.inline)
+                .offset(y: 42)
+        }
+        .ignoresSafeArea()
     }
 }
 

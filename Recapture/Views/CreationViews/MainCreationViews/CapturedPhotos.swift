@@ -25,19 +25,25 @@ import SwiftUI
 //    }
 //}
 
-struct ProcessCapture: View {
+struct CapturedPhotos: View {
     @State private var progress = 0.5
     
     var body: some View {
+        
         VStack {
-            ProgressView(value: 0.25) { Text("25% progress") }
+            Text("Hello")
         }
-        .padding()
+        .navigationTitle("Captured Photos")
+        .navigationBarTitleDisplayMode(.inline)
+        
     }
+    
 }
+
+
 
 struct ProcessCapture_Previews: PreviewProvider {
     static var previews: some View {
-        ProcessCapture()
+        CapturedPhotos()
     }
 }

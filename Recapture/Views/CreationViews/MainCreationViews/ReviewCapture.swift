@@ -9,35 +9,46 @@ import SwiftUI
 
 struct ReviewCapture: View {
     var body: some View {
-        NavigationView {
-            VStack {
+        
+        VStack {
+            
+            Spacer()
+            ReviewBottomButton()
+            
+        }
+        .navigationBarItems(leading:
+                                VStack(alignment: .leading, spacing: 4) {
+            Text("Title name of project")
+                .fontWeight(.semibold)
+            HStack(spacing: 4) {
+                Text ("18MB")
+                Text ("•")
+                Text ("42 Images")
+            }
+            .font(.callout)
+            .foregroundColor(.gray)
+            
+        }
+        )
+        
+        //Test toolbar
+        .toolbar {
+            
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
                 
-                //Header
-                VStack(alignment: .center) {
-                    Text("SwiftUI")
-                        .fontWeight(.semibold)
-                    Text("Subtitle")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                    Text("Jan 12, 2022 15:32")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                }
-                .padding()
-                Divider()
-                Spacer()
+                NavigationLink(destination: NotificationView(), label: {
+                    Image(systemName: "ellipsis")
+                        .foregroundColor(.blue)
+                })
                 
-                //Body
-                VStack {
-                    Text("Hello")
-                    Text("World")
-                }
-                Spacer()
-                
-                //Navbar title
+                NavigationLink(destination: SettingsView(), label: {
+                    Image(systemName: "trash")
+                        .foregroundColor(.red)
+                })
             }
             
         }
+        
     }
 }
 

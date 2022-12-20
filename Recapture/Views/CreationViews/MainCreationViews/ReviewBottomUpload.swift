@@ -7,23 +7,28 @@
 
 import SwiftUI
 
-struct BottomActionView: View {
+struct ReviewBottomUpload: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 24.0) {
             
             VStack(alignment: .leading, spacing: 4.0) {
+                
                 HStack {
-                    Text("UPLOADING")
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
+                    VStack(alignment: .leading, spacing: 4.0) {
+                        Text("Uploading")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                        Text("Please keep the app open while uploading")
+                            .font(.callout)
+                            .foregroundColor(.gray)
+                    }
                     Spacer()
                     Text("45%")
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                 }
-                Text("Please keep the app open while uploading")
-                    .foregroundColor(.gray)
+                
             }
 
             ProgressView(value: 0.25)
@@ -50,6 +55,6 @@ struct BottomActionView: View {
 
 struct BottomActionView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomActionView()
+        ReviewBottomUpload()
     }
 }
