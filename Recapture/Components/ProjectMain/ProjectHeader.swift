@@ -26,9 +26,8 @@ struct ProjectHeader: View {
                 }
             }
             .padding()
+            .offset(y: 26)
         
-        
-
     }
 }
 

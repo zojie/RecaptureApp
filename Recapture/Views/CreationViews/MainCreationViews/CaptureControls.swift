@@ -11,40 +11,44 @@ struct CaptureControls: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 24.0) {
             
-            Text("PHOTO CAPTURE")
-                .font(.footnote)
-                .fontWeight(.semibold)
-                .foregroundColor(.blue)
             
-            HStack {
+            
+            VStack(spacing: 24.0) {
+                Text("PHOTO CAPTURE")
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.yellow)
                 
-                NavigationLink(destination: CapturedPhotos()) {
-                    ZStack {
-                        Image("OnboardingImage")
-                            .frame(width: 72.0, height: 72.0)
-                            .mask(Rectangle())
-                            .cornerRadius(10)
+                HStack {
+                    
+                    NavigationLink(destination: CapturedPhotos()) {
                         ZStack {
-                            Text("1")
-                                .foregroundColor(Color.black)
-                                .frame(width: 32.0, height: 32.0)
-                                .background(.white)
-                                .mask(Circle())
+                            Image("OnboardingImage")
+                                .frame(width: 72.0, height: 72.0)
+                                .mask(Rectangle())
+                                .cornerRadius(10)
+                            ZStack {
+                                Text("1")
+                                    .foregroundColor(Color.black)
+                                    .frame(width: 32.0, height: 32.0)
+                                    .background(.white)
+                                    .mask(Circle())
+                            }
                         }
                     }
-                }
-                
-                
-                Spacer()
-                
-                Image("OnboardingImage")
-                    .frame(width: 72.0, height: 72.0)
-                    .mask(Circle())
-                Spacer()
-                
-                NavigationLink(destination: ReviewCapture()) {
-                    Text("Done")
-                        .foregroundColor(.blue)
+                    
+                    
+                    Spacer()
+                    
+                    Image("OnboardingImage")
+                        .frame(width: 72.0, height: 72.0)
+                        .mask(Circle())
+                    Spacer()
+                    
+                    NavigationLink(destination: ReviewCapture()) {
+                        Text("Done")
+                            .foregroundColor(.yellow)
+                    }
                 }
             }
             
