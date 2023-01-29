@@ -34,20 +34,19 @@ struct OnboardingView: View {
                 
                 Spacer()
                 
-                VStack(alignment: .leading, spacing: 24) {
-                    //Continue
-                    Button(action: {
-                        
-                    }, label: {
-                        NavigationLink(destination: LoginView()) {
-                            Text("Continue")
-                        }
-                        .foregroundColor(.white)
-                        .frame(width: 342, height: 50)
-                        .background(.blue)
-                        .cornerRadius(10)
-                    })
-                }
+                //Continue
+                Button(action: {
+                    
+                }, label: {
+                    NavigationLink(destination: LoginView()) {
+                        Text("Continue")
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: 342, height: 50)
+                    .background(.blue)
+                    .cornerRadius(10)
+                })
+                
             }
             .navigationBarTitle("Welcome")
             .navigationBarTitleDisplayMode(.inline)

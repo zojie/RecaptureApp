@@ -19,16 +19,15 @@ struct ProjectHeader: View {
                         .font(.callout)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.blue)
-                    Text ("Drafts")
+                    Text ("Drafts (4)")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.gray)
                 }
             }
             .padding()
+            .offset(y: 26)
         
-        
-
     }
 }
 

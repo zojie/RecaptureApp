@@ -9,23 +9,33 @@ import SwiftUI
 
 struct CaptureARView: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Help")
-            }
-            .navigationBarItems(leading:
-                VStack(alignment: .leading) {
-                    Text("SwiftUI")
-                        .fontWeight(.semibold)
-                    Text("Subtitle")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                    Text("January 12, 2022 15:32")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                }
-        )
+        
+        //Bottom Capturing
+        VStack{
+            
+            Spacer()
+            CaptureControls()
+      
         }
+        .navigationBarTitle("")
+        .toolbar {
+            
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                
+                NavigationLink(destination: TutorialView(), label: {
+                    Image(systemName: "bolt.circle")
+                        .foregroundColor(.blue)
+                })
+                
+                NavigationLink(destination: NotificationView(), label: {
+                    Image(systemName: "info.circle")
+                        .foregroundColor(.blue)
+                })
+                
+            }
+            
+        }
+
     }
 }
 
