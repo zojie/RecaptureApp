@@ -39,7 +39,6 @@ struct CardViewBlock: View {
         .foregroundColor(.white)
         .padding()
         .frame(width: 212, height: 162)
-//        .frame(maxWidth: .infinity , alignment: .leading: 162)
         .background(LinearGradient(
             gradient: Gradient(stops: [
                 .init(color: Color(#colorLiteral(red: 0, green: 0.47843137383461, blue: 1, alpha: 1)), location: 0),
