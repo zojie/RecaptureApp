@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct CaptureARView: View {
+    @StateObject var model = CameraViewModel()
+    
     var body: some View {
         
         //Bottom Capturing
         VStack{
             
+            CameraView(model: model)
             Spacer()
-            CaptureControls()
+            CaptureControls(model: model)
       
         }
         .navigationBarTitle("")
@@ -39,8 +42,8 @@ struct CaptureARView: View {
     }
 }
 
-struct CaptureARView_Previews: PreviewProvider {
-    static var previews: some View {
-        CaptureARView()
-    }
-}
+//struct CaptureARView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CaptureARView()
+//    }
+//}

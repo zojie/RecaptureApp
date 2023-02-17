@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CaptureControls: View {
+    @ObservedObject var model: CameraViewModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 24.0) {
             
@@ -22,27 +24,31 @@ struct CaptureControls: View {
                 HStack {
                     
                     NavigationLink(destination: CapturedPhotos()) {
-                        ZStack {
-                            Image("OnboardingImage")
-                                .frame(width: 72.0, height: 72.0)
-                                .mask(Rectangle())
-                                .cornerRadius(10)
-                            ZStack {
-                                Text("1")
-                                    .foregroundColor(Color.black)
-                                    .frame(width: 32.0, height: 32.0)
-                                    .background(.white)
-                                    .mask(Circle())
-                            }
-                        }
+//                        ZStack {
+//                            Image("OnboardingImage")
+//                                .frame(width: 72.0, height: 72.0)
+//                                .mask(Rectangle())
+//                                .cornerRadius(10)
+//                            ZStack {
+//                                Text("1")
+//                                    .foregroundColor(Color.black)
+//                                    .frame(width: 32.0, height: 32.0)
+//                                    .background(.white)
+//                                    .mask(Circle())
+//                            }
+//                        }
+                        ThumbnailView(model: model)
+                            .frame(width: 72.0)
+                            .padding(.horizontal)
                     }
                     
                     
                     Spacer()
                     
-                    Image("OnboardingImage")
-                        .frame(width: 72.0, height: 72.0)
-                        .mask(Circle())
+//                    Image("OnboardingImage")
+//                        .frame(width: 72.0, height: 72.0)
+//                        .mask(Circle())
+                    CaptureButton(model: model)
                     Spacer()
                     
                     NavigationLink(destination: ReviewCapture()) {
@@ -69,8 +75,8 @@ struct CaptureControls: View {
     }
 }
 
-struct CaptureControls_Previews: PreviewProvider {
-    static var previews: some View {
-        CaptureControls()
-    }
-}
+//struct CaptureControls_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CaptureControls()
+//    }
+//}
