@@ -33,18 +33,22 @@ struct CameraView: View {
 //                    }
 //                }
 //            }
-            CameraPreviewView(session: model.session)
-//                .frame(width: geometryReader.size.width,
-//                       height: geometryReader.size.width * aspectRatio,
-//                       alignment: .center)
-                .clipShape(RoundedRectangle(cornerRadius: previewCornerRadius))
-                .onAppear { model.startSession() }
-                .onDisappear { model.pauseSession() }
-                .overlay(
-                    Image("ObjectReticle")
-                        .resizable()
-                        .scaledToFit()
+            
+            ZStack {
+                Color.black.edgesIgnoringSafeArea(.all)
+                CameraPreviewView(session: model.session)
+    //                .frame(width: geometryReader.size.width,
+    //                       height: geometryReader.size.width * aspectRatio,
+    //                       alignment: .center)
+                    .clipShape(RoundedRectangle(cornerRadius: previewCornerRadius))
+                    .onAppear { model.startSession() }
+                    .onDisappear { model.pauseSession() }
+                    .overlay(
+                        Image("ObjectReticle")
+                            .resizable()
+                            .scaledToFit()
                         .padding(.all))
+            }
             
         }
     }

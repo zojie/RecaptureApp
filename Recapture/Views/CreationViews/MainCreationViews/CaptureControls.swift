@@ -12,9 +12,6 @@ struct CaptureControls: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 24.0) {
-            
-            
-            
             VStack(spacing: 24.0) {
                 Text("PHOTO CAPTURE")
                     .font(.footnote)
@@ -22,44 +19,40 @@ struct CaptureControls: View {
                     .foregroundColor(.yellow)
                 
                 HStack {
-                    
-                    NavigationLink(destination: CapturedPhotos()) {
-//                        ZStack {
-//                            Image("OnboardingImage")
-//                                .frame(width: 72.0, height: 72.0)
-//                                .mask(Rectangle())
-//                                .cornerRadius(10)
-//                            ZStack {
-//                                Text("1")
-//                                    .foregroundColor(Color.black)
-//                                    .frame(width: 32.0, height: 32.0)
-//                                    .background(.white)
-//                                    .mask(Circle())
-//                            }
-//                        }
+                    ZStack {
                         ThumbnailView(model: model)
                             .frame(width: 72.0)
                             .padding(.horizontal)
+                        
+                            Text("\(model.photoIdGetter)")
+                                .foregroundColor(Color.black)
+                                .frame(width: 32.0, height: 32.0)
+                                .background(.white)
+                                .mask(Circle())
                     }
                     
-                    
                     Spacer()
                     
-//                    Image("OnboardingImage")
-//                        .frame(width: 72.0, height: 72.0)
-//                        .mask(Circle())
                     CaptureButton(model: model)
+                    
                     Spacer()
                     
-                    NavigationLink(destination: ReviewCapture()) {
-                        Text("Done")
-                            .foregroundColor(.yellow)
+                    NavigationLink(destination: ReviewCapture(), tag: 2, selection: $model.selectionOfReviewCaptureNavigation) {
+                        
+                        Button {
+                            model.selectionOfReviewCaptureNavigation = model.isDoneActive ? 2 : 0
+                        } label: {
+                            Text("Done")
+                                .foregroundColor(model.isDoneActive ? .yellow : .gray)
+                        }
+
+                       
                     }
                 }
             }
             
             VStack(alignment: .leading) {
-                Text("23 selected")
+                Text("\(model.photoIdGetter) selected")
                     .font(.callout)
                     .fontWeight(.semibold)
                     .foregroundColor(Color.white)
