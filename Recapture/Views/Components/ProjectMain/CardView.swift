@@ -29,8 +29,11 @@ struct CardViewBlock: View {
                 //            isPresentNameProjectAlert = true
                 alertTextField(title: "Name Project", message: "", hintText: "Untitled", primaryTitle: "Continue", secondaryTitle: "Cancel") { text in
                     projectName = text
-                    //                isProjectNamed = true
-                    self.selection = 1
+                    if projectName == "" {
+                        self.selection = 0
+                    } else {
+                        self.selection = 1
+                    }
                 } secondaryAction: {
                     print("Cancelled")
                 }
