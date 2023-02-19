@@ -68,6 +68,7 @@
 		BE42A60F299D440800699D62 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42A60E299D440800699D62 /* CameraPreviewView.swift */; };
 		BE42A611299D44CA00699D62 /* CaptureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42A610299D44CA00699D62 /* CaptureInfo.swift */; };
 		BE42A613299D454000699D62 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42A612299D454000699D62 /* Capture.swift */; };
+		BED1A4BF29A28E85008FD96B /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED1A4BE29A28E85008FD96B /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		BE42A60E299D440800699D62 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		BE42A610299D44CA00699D62 /* CaptureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureInfo.swift; sourceTree = "<group>"; };
 		BE42A612299D454000699D62 /* Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
+		BED1A4BE29A28E85008FD96B /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +306,7 @@
 				BE2424ED299E2EDF00BF8C2C /* Helpers */,
 				1F2CFA0128FDAD9F007ADB05 /* Model */,
 				1F2CF9F628FD8DAD007ADB05 /* Views */,
+				BED1A4BD29A28BEF008FD96B /* Extentions */,
 				1F7C2EDC28FCD1C300972C3A /* Assets.xcassets */,
 				1F7C2EE128FCD1C300972C3A /* Persistence.swift */,
 				1F7C2EE328FCD1C300972C3A /* Recapture.xcdatamodeld */,
@@ -439,6 +442,14 @@
 				BE2424F6299E503300BF8C2C /* AsyncImageHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BED1A4BD29A28BEF008FD96B /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BED1A4BE29A28E85008FD96B /* View+Extension.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,6 +604,7 @@
 				1FFCBD332912A73000F6A6D5 /* CapturedPhotos.swift in Sources */,
 				1F8B5CD7290D39BD00D6EE25 /* SubscriptionView.swift in Sources */,
 				1F8B5CD9290D39E900D6EE25 /* SupportView.swift in Sources */,
+				BED1A4BF29A28E85008FD96B /* View+Extension.swift in Sources */,
 				BE2424F3299E4F8200BF8C2C /* CameraGalleryView.swift in Sources */,
 				1F8B5CD5290D39B000D6EE25 /* DomainView.swift in Sources */,
 				1F8B5CDE290D3A1100D6EE25 /* PrivacyView.swift in Sources */,
