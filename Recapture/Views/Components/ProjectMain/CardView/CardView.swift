@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     @StateObject var cardViewModel = CardViewModel()
     var body: some View {
+        
         HStack {
             NavigationLink(destination: CaptureARView(), tag: 1, selection: $cardViewModel.selectionForCaptureARView) {
                 Button(action: {
@@ -30,6 +31,7 @@ struct CardView: View {
                             .font(.headline)
                             .fontWeight(.bold)
                         Text("Create new AR model with only your camera")
+                            .multilineTextAlignment(.leading)
                         
                         
                         
@@ -38,7 +40,7 @@ struct CardView: View {
                 })
                 .foregroundColor(.white)
                 .padding()
-                .frame(width: 212, height: 162)
+                .frame(width: UIScreen.main.bounds.width * 0.6, height: 162)
                 .background(LinearGradient(
                     gradient: Gradient(stops: [
                         .init(color: Color(#colorLiteral(red: 0, green: 0.47843137383461, blue: 1, alpha: 1)), location: 0),
@@ -60,7 +62,7 @@ struct CardView: View {
             }
             .foregroundColor(.white)
             .padding(4.0)
-            .frame(width: 115, height: 162)
+            .frame(width: UIScreen.main.bounds.width * 0.3, height: 162)
             .background(.gray)
             .cornerRadius(12)
         }
