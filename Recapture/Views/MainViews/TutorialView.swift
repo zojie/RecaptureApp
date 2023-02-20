@@ -42,6 +42,7 @@ struct TutorialView: View {
                         }
                         .padding(.vertical)
                         
+                        Spacer()
                         Image(systemName: "arrow.up.right")
                             .foregroundColor(.blue)
                     }

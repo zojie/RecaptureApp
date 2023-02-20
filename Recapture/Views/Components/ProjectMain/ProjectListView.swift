@@ -55,9 +55,63 @@ struct ProjectListView: View {
                         }
                         .padding(.vertical)
                         
+                        Spacer()
+                        
                         //More Options
-                        Image(systemName: "ellipsis")
-                            .foregroundColor(.gray)
+                        ProjectActions()
+                    }
+                    .contextMenu {
+                        Button {
+                            //Do something here
+                        } label: {
+                            Label("Share", systemImage: "square.and.arrow.up")
+                        }
+                        
+                        Button {
+                            //Do something here
+                        } label: {
+                            Label("Get Info", systemImage: "info.circle")
+                        }
+                        
+                        Button {
+                            //Do something here
+                        } label: {
+                            Label("Rename Project", systemImage: "pencil")
+                        }
+                        
+                        Button {
+                            //Do something here
+                        } label: {
+                            Label("AR View", systemImage: "arkit")
+                        }
+                        
+                        Divider()
+                        
+                        Button {
+                            //Do something here
+                        } label: {
+                            Label("QR Code", systemImage: "qrcode")
+                        }
+                        
+                        Button {
+                            //Do something here
+                        } label: {
+                            Label("Analytics", systemImage: "chart.bar")
+                        }
+                        
+                        Button {
+                            //Do something here
+                        } label: {
+                            Label("Web Link", systemImage: "link")
+                        }
+                        
+                        Divider()
+                        
+                        Button(role: .destructive) {
+                            //Do something here
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
                     }
                 }
             }

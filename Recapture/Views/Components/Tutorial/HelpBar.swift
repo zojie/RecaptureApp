@@ -8,26 +8,19 @@
 import SwiftUI
 
 struct HelpBar: View {
+    @State private var favoriteColor = 0
+    
     var body: some View {
         
-        //Bars
-        Button {
-            //Do something here
-        } label: {
-            HStack(spacing: 20.0) {
-                Text ("Video Tutorials")
-                    .font(.callout)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color.blue)
-                Text ("FAQ")
-                    .font(.callout)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color.gray)
+        VStack {
+            Picker("What is your favorite color?", selection: $favoriteColor) {
+                Text("Video Tutorials").tag(0)
+                Text("FAQ").tag(1)
             }
+            .pickerStyle(.segmented)
         }
         .padding()
-        .offset(y: 26)
-
+        
     }
 }
 
