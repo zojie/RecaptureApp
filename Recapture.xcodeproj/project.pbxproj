@@ -71,6 +71,8 @@
 		BE42A60F299D440800699D62 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42A60E299D440800699D62 /* CameraPreviewView.swift */; };
 		BE42A611299D44CA00699D62 /* CaptureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42A610299D44CA00699D62 /* CaptureInfo.swift */; };
 		BE42A613299D454000699D62 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42A612299D454000699D62 /* Capture.swift */; };
+		BECCB12D29A2E782001AB894 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECCB12C29A2E782001AB894 /* CardViewModel.swift */; };
+		BED1A4BF29A28E85008FD96B /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED1A4BE29A28E85008FD96B /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		BE42A60E299D440800699D62 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		BE42A610299D44CA00699D62 /* CaptureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureInfo.swift; sourceTree = "<group>"; };
 		BE42A612299D454000699D62 /* Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
+		BECCB12C29A2E782001AB894 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		BED1A4BE29A28E85008FD96B /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 				1F665E57290600F100FE0BD6 /* SplashAndWelcomeViews */,
 				1F665E53290600AA00FE0BD6 /* AuthViews */,
 				1F665E56290600D800FE0BD6 /* MainViews */,
+				BE42A60E299D440800699D62 /* CameraPreviewView.swift */,
 				1FFCBD1F291292B200F6A6D5 /* CreationViews */,
 			);
 			path = Views;
@@ -212,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2CFA0228FDB014007ADB05 /* HeaderBar.swift */,
-				1FF885FF2901647D0074656B /* CardView.swift */,
+				BECCB12B29A2E68C001AB894 /* CardView */,
 				1F665E372904B6E100FE0BD6 /* ProjectHeader.swift */,
 				1F2CF9FD28FD9FE3007ADB05 /* ProjectListView.swift */,
 				1F665E312904A8C000FE0BD6 /* ProjectActions.swift */,
@@ -313,6 +318,7 @@
 				BE2424ED299E2EDF00BF8C2C /* Helpers */,
 				1F2CFA0128FDAD9F007ADB05 /* Model */,
 				1F2CF9F628FD8DAD007ADB05 /* Views */,
+				BED1A4BD29A28BEF008FD96B /* Extentions */,
 				1F7C2EDC28FCD1C300972C3A /* Assets.xcassets */,
 				1F7C2EE128FCD1C300972C3A /* Persistence.swift */,
 				1F7C2EE328FCD1C300972C3A /* Recapture.xcdatamodeld */,
@@ -410,10 +416,9 @@
 				BE2424E9299E2E4B00BF8C2C /* CaptureFolderView */,
 				BE2424E6299E2D8F00BF8C2C /* CameraView */,
 				1FFCBD2E2912A6E000F6A6D5 /* CaptureARView.swift */,
-				BE42A60E299D440800699D62 /* CameraPreviewView.swift */,
+				1FE53F7F2951F7E10097EB08 /* CaptureControls.swift */,
 				BE2424F2299E4F8200BF8C2C /* CameraGalleryView.swift */,
 				BE2424F4299E4FAF00BF8C2C /* CaptureFoldersView.swift */,
-				1FE53F7F2951F7E10097EB08 /* CaptureControls.swift */,
 				1FFCBD302912A70600F6A6D5 /* ReviewCapture.swift */,
 				1FE53F812951FC3B0097EB08 /* ReviewBottomButton.swift */,
 				1FDC55822916BB3D0030D6E4 /* ReviewBottomUpload.swift */,
@@ -448,6 +453,23 @@
 				BE2424F6299E503300BF8C2C /* AsyncImageHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BECCB12B29A2E68C001AB894 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				1FF885FF2901647D0074656B /* CardView.swift */,
+				BECCB12C29A2E782001AB894 /* CardViewModel.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		BED1A4BD29A28BEF008FD96B /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BED1A4BE29A28E85008FD96B /* View+Extension.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,7 +624,9 @@
 				1FFCBD332912A73000F6A6D5 /* CapturedPhotos.swift in Sources */,
 				1F8B5CD7290D39BD00D6EE25 /* SubscriptionView.swift in Sources */,
 				1F8B5CD9290D39E900D6EE25 /* SupportView.swift in Sources */,
+				BED1A4BF29A28E85008FD96B /* View+Extension.swift in Sources */,
 				BE2424F3299E4F8200BF8C2C /* CameraGalleryView.swift in Sources */,
+				BECCB12D29A2E782001AB894 /* CardViewModel.swift in Sources */,
 				1F8B5CD5290D39B000D6EE25 /* DomainView.swift in Sources */,
 				1F8B5CDE290D3A1100D6EE25 /* PrivacyView.swift in Sources */,
 				1FFCBD2D2912A1F900F6A6D5 /* ProjectInfoView.swift in Sources */,
@@ -797,7 +821,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recapture/Preview Content\"";
-				DEVELOPMENT_TEAM = 3JU54KZXA3;
+				DEVELOPMENT_TEAM = RGK9UBPUGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera to take pictures";
@@ -812,7 +836,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.recapturelabs.Recapture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benagos.Recapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -828,7 +852,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recapture/Preview Content\"";
-				DEVELOPMENT_TEAM = 3JU54KZXA3;
+				DEVELOPMENT_TEAM = RGK9UBPUGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera to take pictures";
@@ -843,7 +867,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.recapturelabs.Recapture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benagos.Recapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

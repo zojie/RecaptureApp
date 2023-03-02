@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProjectActions: View {
     var body: some View {
+        
         Menu {
                         
             //Share
@@ -18,32 +19,11 @@ struct ProjectActions: View {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
             
-            //Web Link
+            //Get Info
             Button {
                 //Do something here
             } label: {
-                Label("Web Link", systemImage: "link")
-            }
-            
-            //Analytics
-            Button {
-                //Do something here
-            } label: {
-                Label("Analytics", systemImage: "chart.bar")
-            }
-            
-            //QR Code
-            Button {
-                //Do something here
-            } label: {
-                Label("QR Code", systemImage: "qrcode")
-            }
-            
-            //AR View
-            Button {
-                //Do something here
-            } label: {
-                Label("AR View", systemImage: "arkit")
+                Label("Get Info", systemImage: "info.circle")
             }
             
             //Rename Project
@@ -53,12 +33,37 @@ struct ProjectActions: View {
                 Label("Rename Project", systemImage: "pencil")
             }
             
-            //Get Info
+            //AR View
             Button {
                 //Do something here
             } label: {
-                Label("Get Info", systemImage: "info.circle")
+                Label("AR View", systemImage: "arkit")
             }
+            
+            Divider()
+            
+            //QR Code
+            Button {
+                //Do something here
+            } label: {
+                Label("QR Code", systemImage: "qrcode")
+            }
+            
+            //Analytics
+            Button {
+                //Do something here
+            } label: {
+                Label("Analytics", systemImage: "chart.bar")
+            }
+            
+            //Web Link
+            Button {
+                //Do something here
+            } label: {
+                Label("Web Link", systemImage: "link")
+            }
+            
+            Divider()
             
             //Delete
             Button(role: .destructive) {

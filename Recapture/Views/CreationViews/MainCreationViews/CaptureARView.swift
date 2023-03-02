@@ -13,30 +13,33 @@ struct CaptureARView: View {
     var body: some View {
         
         //Bottom Capturing
-        VStack{
-            
-            CameraView(model: model)
-            Spacer()
-            CaptureControls(model: model)
-      
-        }
-        .navigationBarTitle("")
-        .toolbar {
-            
-            ToolbarItemGroup(placement: .navigationBarTrailing) {
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+            VStack{
                 
-                NavigationLink(destination: TutorialView(), label: {
-                    Image(systemName: "bolt.circle")
-                        .foregroundColor(.blue)
-                })
-                
-                NavigationLink(destination: NotificationView(), label: {
-                    Image(systemName: "info.circle")
-                        .foregroundColor(.blue)
-                })
-                
+                CameraView(model: model)
+                Spacer()
+                CaptureControls(model: model)
+          
             }
-            
+            .navigationBarTitle("")
+            .toolbar {
+                
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
+                    NavigationLink(destination: TutorialView(), label: {
+                        Image(systemName: "bolt.circle")
+                            .foregroundColor(.blue)
+                    })
+                    
+                    NavigationLink(destination: NotificationView(), label: {
+                        Image(systemName: "info.circle")
+                            .foregroundColor(.blue)
+                    })
+                    
+                }
+                
+        }
         }
 
     }

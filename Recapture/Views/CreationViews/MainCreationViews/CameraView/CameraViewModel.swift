@@ -91,7 +91,20 @@ class CameraViewModel: ObservableObject {
     /// If `isAutoCaptureActive` is `true`, this property contains the number of seconds until the
     /// next capture trigger.
     @Published var timeUntilCaptureSecs: Double = 0
-
+    
+    /// This property returns true when the captured photos are 20 or more
+    @Published var isDoneActive: Bool = false
+    
+    @Published var selectionOfReviewCaptureNavigation: Int? = nil
+    
+    /// This property is a getter for photoId. It allows the value of photoId to be read by other objects
+    /// but avoids any modification to it by external objects.
+    var photoIdGetter: UInt32 {
+        get {
+            return photoId
+        }
+    }
+    
     var autoCaptureIntervalSecs: Double = 0
 
     var readyToCapture: Bool {
@@ -263,7 +276,13 @@ class CameraViewModel: ObservableObject {
 
     // This is the unique identifier for the next photo. This value must be
     // unique within a session.
-    private var photoId: UInt32 = 0
+    private var photoId: UInt32 = 0 {
+        didSet {
+            DispatchQueue.main.async {
+                self.isDoneActive = self.photoId >= 20 ? true : false
+            }
+        }
+    }
 
     private var photoQualityPrioritizationMode: AVCapturePhotoOutput.QualityPrioritization =
         .quality
