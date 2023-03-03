@@ -13,14 +13,14 @@ struct HeaderBar: View {
         VStack(alignment: .trailing) {
             
             //Upgrade
-            Button {
-                //Do something here
-            } label: {
-                Text ("Upgrade Plan")
-                    .foregroundColor(Color.blue)
-                    .padding()
-                    
-            }
+//            Button {
+//                //Do something here
+//            } label: {
+//                Text ("Upgrade Plan")
+//                    .foregroundColor(Color.blue)
+//                    .padding()
+//
+//            }
             
             
             HStack {
@@ -35,10 +35,10 @@ struct HeaderBar: View {
                 }
                 Spacer()
                 
-                Image(systemName: "person.fill")
-                    .frame(width: 56, height: 56)
-                    .background(Color(#colorLiteral(red: 0.886274516582489, green: 0.886274516582489, blue: 0.8980392217636108, alpha: 1)))
-                    .mask(Circle())
+//                Image(systemName: "person.fill")
+//                    .frame(width: 56, height: 56)
+//                    .background(Color(#colorLiteral(red: 0.886274516582489, green: 0.886274516582489, blue: 0.8980392217636108, alpha: 1)))
+//                    .mask(Circle())
             }
             .padding()
         }

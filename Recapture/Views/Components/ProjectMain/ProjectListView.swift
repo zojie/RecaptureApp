@@ -23,7 +23,7 @@ struct ProjectListView: View {
                     HStack {
                         Image(systemName: "image")
                             .frame(width: 100, height: 100)
-                            .background(Color(#colorLiteral(red: 0.886274516582489, green: 0.886274516582489, blue: 0.8980392217636108, alpha: 1)))
+                            .background(.gray)
                             .cornerRadius(12)
                         
                         //Project Details

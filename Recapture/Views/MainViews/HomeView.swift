@@ -12,22 +12,24 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 
+                HeaderBar()
+                
                 CardView()
                 
                 ProjectListView()
             }
             .navigationBarTitle("")
-            .offset(y: 16)
+//            .offset(y: 16)
             .toolbar {
                 
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    
-                    Button(action: {
-                        
-                    }, label: {
-                        Image("AppLogo")
-                    })
-                }
+//                ToolbarItemGroup(placement: .navigationBarLeading) {
+//
+//                    Button(action: {
+//
+//                    }, label: {
+//                        Image("AppLogo")
+//                    })
+//                }
                 
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
