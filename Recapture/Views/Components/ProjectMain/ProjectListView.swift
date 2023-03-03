@@ -17,7 +17,7 @@ struct ProjectListView: View {
             
             //Project List
             List {
-                ForEach(0..<3) { item in
+                ForEach(0..<5) { item in
                     
                     //Image AR View
                     HStack {
