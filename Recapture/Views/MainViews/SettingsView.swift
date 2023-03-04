@@ -97,12 +97,6 @@ struct SettingsView: View {
             //4TH SECTION
             Section(header: Text("About App")) {
                 
-                //Version
-                HStack {
-                    Text("Recapture AR v1.0")
-                        .foregroundColor(.gray)
-                }
-                
                 //Creator
                 HStack {
                     Text("Created by Ehizojie Ihayere")
@@ -125,6 +119,12 @@ struct SettingsView: View {
                     Spacer()
                     Image(systemName: "arrow.up.right")
                         .foregroundColor(.blue)
+                }
+                
+                //Version
+                HStack {
+                    Text("RecaptureAR v1.0")
+                        .foregroundColor(.gray)
                 }
                 
             }

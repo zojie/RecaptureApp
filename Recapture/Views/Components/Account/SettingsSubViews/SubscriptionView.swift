@@ -23,7 +23,7 @@ struct SubscriptionView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                     
-                    VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 24) {
                         
                         HStack {
                             Image(systemName: "rectangle.stack.fill")
@@ -102,21 +102,22 @@ struct SubscriptionView: View {
                         .border(.gray, width: 2)
                         .cornerRadius(10)
                         
-                        
-                        Button("Subscribe Now") {
-                            //Do something here
+                        VStack {
+                            Button("Subscribe Now") {
+                                //Do something here
+                            }
+                            .foregroundColor(.white)
+                            .frame(width: 342, height: 50)
+                            .background(.blue)
+                            .cornerRadius(10)
+                            
+                            Button("Restore Subscription") {
+                                //Do something here
+                            }
+                            .foregroundColor(.white)
+                            .frame(width: 342, height: 50)
+                            .cornerRadius(10)
                         }
-                        .foregroundColor(.white)
-                        .frame(width: 342, height: 50)
-                        .background(.blue)
-                        .cornerRadius(10)
-                        
-                        Button("Restore Subscription") {
-                            //Do something here
-                        }
-                        .foregroundColor(.white)
-                        .frame(width: 342, height: 50)
-                        .cornerRadius(10)
                     }
                     .foregroundColor(.white)
                 }

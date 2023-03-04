@@ -40,6 +40,7 @@ struct OnboardingView: View {
                 }, label: {
                     NavigationLink(destination: LoginView()) {
                         Text("Continue")
+                            .fontWeight(.semibold)
                     }
                     .foregroundColor(.white)
                     .frame(width: 342, height: 50)

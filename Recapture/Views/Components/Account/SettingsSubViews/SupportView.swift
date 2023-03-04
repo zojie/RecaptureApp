@@ -19,7 +19,7 @@ struct SupportView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Report an issue")
-                                .fontWeight(.semibold)
+                                .fontWeight(.medium)
                             Text("Is something wrong? Let us know")
                                 .font(.callout)
                                 .foregroundColor(.gray)
@@ -32,7 +32,7 @@ struct SupportView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Share feature suggestions")
-                                .fontWeight(.semibold)
+                                .fontWeight(.medium)
                             Text("Got some ideas? Tell us about it")
                                 .font(.callout)
                                 .foregroundColor(.gray)
@@ -45,7 +45,7 @@ struct SupportView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Give us a review")
-                                .fontWeight(.semibold)
+                                .fontWeight(.medium)
                             Text("Let others know your experinece")
                                 .font(.callout)
                                 .foregroundColor(.gray)
@@ -55,11 +55,11 @@ struct SupportView: View {
                             .foregroundColor(.blue)
                     }
                 }
-                .listStyle(.plain)
                 .navigationTitle("Support")
                 .navigationBarTitleDisplayMode(.inline)
+                .listStyle(.plain)
+                .offset(y: 16)
             }
-            .offset(y: 24)
     }
 }
 
