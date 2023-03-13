@@ -97,6 +97,8 @@ class CameraViewModel: ObservableObject {
     
     @Published var selectionOfReviewCaptureNavigation: Int? = nil
     
+    @Published var projectName: String = "Example"
+    
     /// This property is a getter for photoId. It allows the value of photoId to be read by other objects
     /// but avoids any modification to it by external objects.
     var photoIdGetter: UInt32 {
@@ -175,7 +177,7 @@ class CameraViewModel: ObservableObject {
         // publish it on the main thread.
         sessionQueue.async {
             do {
-                let newCaptureFolder = try CameraViewModel.createNewCaptureFolder()
+                let newCaptureFolder = try CameraViewModel.createNewCaptureFolder(name: self.projectName)
                 logger.log("Created new capture folder: \"\(String(describing: self.captureDir))\"")
                 DispatchQueue.main.async {
                     logger.info("Publishing new capture folder: \"\(String(describing: self.captureDir))\"")
@@ -468,8 +470,8 @@ class CameraViewModel: ObservableObject {
         triggerEveryTimer?.stop()
     }
 
-    private static func createNewCaptureFolder() throws -> CaptureFolderState {
-        guard let newCaptureDir = CaptureFolderState.createCaptureDirectory() else {
+    private static func createNewCaptureFolder(name: String = "Untitled") throws -> CaptureFolderState {
+        guard let newCaptureDir = CaptureFolderState.createCaptureDirectory(name: name) else {
             throw SetupError.failed(msg: "Can't create capture directory!")
         }
         return CaptureFolderState(url: newCaptureDir)

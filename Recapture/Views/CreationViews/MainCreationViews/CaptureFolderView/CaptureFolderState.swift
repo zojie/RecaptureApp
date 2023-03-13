@@ -116,7 +116,7 @@ class CaptureFolderState: ObservableObject {
     
     /// This method attempts to create a capture directory for outputting the images and metadata. It names
     /// the subfolder based on the current time. If it's unable to create the directory, this method returns `nil`.
-    static func createCaptureDirectory() -> URL? {
+    static func createCaptureDirectory(name: String = "Untitled") -> URL? {
         // The app's Info.plist file enables sharing, which makes the app's
         // documents directory visible in the Files app and allows sharing
         // using AirDrop, Mail, or iCloud.
@@ -131,7 +131,7 @@ class CaptureFolderState: ObservableObject {
         formatter.timeStyle = .medium
         let timestamp = formatter.string(from: Date())
         let newCaptureDir = capturesFolder
-            .appendingPathComponent(timestamp + "/", isDirectory: true)
+            .appendingPathComponent(name + "/", isDirectory: true)
         
         logger.log("Creating capture path: \"\(String(describing: newCaptureDir))\"")
         let capturePath = newCaptureDir.path

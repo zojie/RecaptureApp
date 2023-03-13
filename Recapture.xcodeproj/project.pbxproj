@@ -825,7 +825,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recapture/Preview Content\"";
-				DEVELOPMENT_TEAM = RGK9UBPUGL;
+				DEVELOPMENT_TEAM = C35WAJESWR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera to take pictures";
@@ -856,7 +856,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recapture/Preview Content\"";
-				DEVELOPMENT_TEAM = RGK9UBPUGL;
+				DEVELOPMENT_TEAM = C35WAJESWR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera to take pictures";
