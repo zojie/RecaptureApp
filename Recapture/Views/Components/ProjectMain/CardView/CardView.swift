@@ -9,12 +9,14 @@ import SwiftUI
 
 struct CardView: View {
     @StateObject var cardViewModel = CardViewModel()
+    
+//    @ObservedObject var model: CameraViewModel
     var body: some View {
         
         HStack {
-            NavigationLink(destination: CaptureARView(), tag: 1, selection: $cardViewModel.selectionForCaptureARView) {
+            NavigationLink(destination: CaptureARView(projectName: $cardViewModel.projectName), tag: 1, selection: $cardViewModel.selectionForCaptureARView) {
                 Button(action: {
-                    alertTextField(title: "Name Project", message: "", hintText: "Untitled", primaryTitle: "Continue", secondaryTitle: "Cancel") { text in
+                    alertTextField(title: "Project Name", message: "", hintText: "Untitled", primaryTitle: "Continue", secondaryTitle: "Cancel") { text in
                         cardViewModel.setProjectName(as: text)
                         cardViewModel.setSelectionForCaptureARView()
                     } secondaryAction: {
@@ -70,8 +72,8 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView()
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardView()
+//    }
+//}

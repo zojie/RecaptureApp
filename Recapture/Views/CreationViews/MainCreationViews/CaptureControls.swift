@@ -37,7 +37,7 @@ struct CaptureControls: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: ReviewCapture(), tag: 2, selection: $model.selectionOfReviewCaptureNavigation) {
+                    NavigationLink(destination: ReviewCapture(model: model), tag: 2, selection: $model.selectionOfReviewCaptureNavigation) {
                         
                         Button {
                             model.selectionOfReviewCaptureNavigation = model.isDoneActive ? 2 : 0
@@ -73,3 +73,4 @@ struct CaptureControls: View {
 //        CaptureControls()
 //    }
 //}
+

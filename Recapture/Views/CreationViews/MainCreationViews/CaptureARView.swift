@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct CaptureARView: View {
-    @StateObject var model = CameraViewModel()
+    @StateObject var model: CameraViewModel
+    @Binding var projectName: String
+    
+    init(projectName: Binding<String>) {
+        self._model = StateObject(wrappedValue: CameraViewModel(projectName: projectName.wrappedValue))
+        self._projectName = projectName
+    }
     
     var body: some View {
         
@@ -16,11 +22,10 @@ struct CaptureARView: View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             VStack{
-                
                 CameraView(model: model)
                 Spacer()
                 CaptureControls(model: model)
-          
+                
             }
             .navigationBarTitle("")
             .toolbar {
@@ -39,14 +44,8 @@ struct CaptureARView: View {
                     
                 }
                 
+            }
         }
-        }
-
+        
     }
 }
-
-//struct CaptureARView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CaptureARView()
-//    }
-//}

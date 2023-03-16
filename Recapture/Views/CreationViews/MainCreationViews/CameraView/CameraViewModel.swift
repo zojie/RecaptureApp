@@ -97,7 +97,7 @@ class CameraViewModel: ObservableObject {
     
     @Published var selectionOfReviewCaptureNavigation: Int? = nil
     
-    @Published var projectName: String = "Example"
+    @Published var projectName: String
     
     /// This property is a getter for photoId. It allows the value of photoId to be read by other objects
     /// but avoids any modification to it by external objects.
@@ -124,7 +124,8 @@ class CameraViewModel: ObservableObject {
     static let recommendedMaxPhotos = 200
     static let defaultAutomaticCaptureIntervalSecs: Double = 3.0
 
-    init() {
+    init(projectName: String) {
+        self.projectName = projectName
         session = AVCaptureSession()
 
         // This is an asynchronous call that begins all setup. It sets
@@ -221,7 +222,7 @@ class CameraViewModel: ObservableObject {
     /// access if the user hasn't yet granted it.
     func startSetup() {
         do {
-            captureFolderState = try CameraViewModel.createNewCaptureFolder()
+            captureFolderState = try CameraViewModel.createNewCaptureFolder(name: projectName)
         } catch {
             setupResult = .cantCreateOutputDirectory
             logger.error("Setup failed!")
