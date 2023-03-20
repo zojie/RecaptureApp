@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReviewCapture: View {
+    @ObservedObject var model: CameraViewModel
     var body: some View {
         
         VStack {
@@ -18,7 +19,7 @@ struct ReviewCapture: View {
         }
         .navigationBarItems(leading:
                                 VStack(alignment: .leading, spacing: 4) {
-            Text("Title name of project")
+            Text(model.projectName)
                 .fontWeight(.semibold)
             HStack(spacing: 4) {
                 Text ("18MB")
@@ -52,8 +53,8 @@ struct ReviewCapture: View {
     }
 }
 
-struct ReviewCapture_Previews: PreviewProvider {
-    static var previews: some View {
-        ReviewCapture()
-    }
-}
+//struct ReviewCapture_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ReviewCapture()
+//    }
+//}

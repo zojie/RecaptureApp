@@ -97,6 +97,8 @@ class CameraViewModel: ObservableObject {
     
     @Published var selectionOfReviewCaptureNavigation: Int? = nil
     
+    @Published var projectName: String
+    
     /// This property is a getter for photoId. It allows the value of photoId to be read by other objects
     /// but avoids any modification to it by external objects.
     var photoIdGetter: UInt32 {
@@ -122,7 +124,8 @@ class CameraViewModel: ObservableObject {
     static let recommendedMaxPhotos = 200
     static let defaultAutomaticCaptureIntervalSecs: Double = 3.0
 
-    init() {
+    init(projectName: String) {
+        self.projectName = projectName
         session = AVCaptureSession()
 
         // This is an asynchronous call that begins all setup. It sets
@@ -175,7 +178,7 @@ class CameraViewModel: ObservableObject {
         // publish it on the main thread.
         sessionQueue.async {
             do {
-                let newCaptureFolder = try CameraViewModel.createNewCaptureFolder()
+                let newCaptureFolder = try CameraViewModel.createNewCaptureFolder(name: self.projectName)
                 logger.log("Created new capture folder: \"\(String(describing: self.captureDir))\"")
                 DispatchQueue.main.async {
                     logger.info("Publishing new capture folder: \"\(String(describing: self.captureDir))\"")
@@ -219,7 +222,7 @@ class CameraViewModel: ObservableObject {
     /// access if the user hasn't yet granted it.
     func startSetup() {
         do {
-            captureFolderState = try CameraViewModel.createNewCaptureFolder()
+            captureFolderState = try CameraViewModel.createNewCaptureFolder(name: projectName)
         } catch {
             setupResult = .cantCreateOutputDirectory
             logger.error("Setup failed!")
@@ -468,8 +471,8 @@ class CameraViewModel: ObservableObject {
         triggerEveryTimer?.stop()
     }
 
-    private static func createNewCaptureFolder() throws -> CaptureFolderState {
-        guard let newCaptureDir = CaptureFolderState.createCaptureDirectory() else {
+    private static func createNewCaptureFolder(name: String = "Untitled") throws -> CaptureFolderState {
+        guard let newCaptureDir = CaptureFolderState.createCaptureDirectory(name: name) else {
             throw SetupError.failed(msg: "Can't create capture directory!")
         }
         return CaptureFolderState(url: newCaptureDir)

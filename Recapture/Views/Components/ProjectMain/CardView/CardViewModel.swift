@@ -6,11 +6,13 @@
 //
 
 import Foundation
+//import SwiftUI
 
 class CardViewModel: ObservableObject {
     @Published var projectName = ""
     @Published var selectionForCaptureARView: Int? = nil
     @Published var text = ""
+//    @Published var model: CameraViewModel
     
     func setSelectionForCaptureARView() {
         selectionForCaptureARView = projectName == "" ? 0 : 1
@@ -20,4 +22,5 @@ class CardViewModel: ObservableObject {
         projectName = text
     }
     init() {}
+   
 }
