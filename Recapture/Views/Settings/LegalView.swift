@@ -17,7 +17,7 @@ struct LegalView: View {
             
             Picker("", selection: $favoriteColor) {
                 Text("Privacy Policy").tag(0)
-                Text("Terms of Use").tag(1)
+                Text("Terms Of Use").tag(1)
             }
             .pickerStyle(.segmented)
             .padding()

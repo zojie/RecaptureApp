@@ -70,7 +70,7 @@ struct SignupView: View {
             }
             .navigationTitle("Create Account")
             .navigationBarTitleDisplayMode(.large)
-            .padding()
+            .padding(.horizontal)
         }
         .offset(y:24)
     }
