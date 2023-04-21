@@ -1,5 +1,5 @@
 //
-//  Notifications.swift
+//  NotificationView.swift
 //  Recapture
 //
 //  Created by Ehizojie Ihayere on 20/10/2022.
@@ -7,17 +7,15 @@
 
 import SwiftUI
 
-struct Notifications: View {
+struct NotificationView: View {
+    
     var body: some View {
         
-        VStack(alignment: .leading) {
-            
-            
-            //            Notification Lists
+        VStack {
             List {
                 ForEach(0..<3) { item in
                     
-                    //             ImageAR Preview
+                    //ImageAR Preview
                     HStack {
                         Image(systemName: "image")
                             .frame(width: 72, height: 72)
@@ -47,21 +45,22 @@ struct Notifications: View {
                             
                         }
                         .padding(.vertical)
-                    
+                        
                     }
                 }
             }
             .listStyle(.plain)
         }
+        .navigationTitle("Notifications")
+        .navigationBarTitleDisplayMode(.large)
+
+        
+        
     }
 }
 
-
-
-
-
-struct Notifications_Previews: PreviewProvider {
+struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
-        Notifications()
+        NotificationView()
     }
 }

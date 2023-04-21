@@ -115,6 +115,7 @@ struct ProjectListView: View {
                     }
                 }
             }
+            .padding(.top, -16.0)
             .listStyle(.plain)
         }
     }
@@ -124,5 +125,117 @@ struct ProjectListView: View {
 struct ProjectListView_Previews: PreviewProvider {
     static var previews: some View {
         ProjectListView()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct ProjectHeader: View {
+    @State private var favoriteColor = 0
+    
+    var body: some View {
+        
+        VStack {
+                Picker("What is your favorite color?", selection: $favoriteColor) {
+                    Text("Project").tag(0)
+                    Text("Draft (3)").tag(1)
+                }
+                .pickerStyle(.segmented)
+            }
+            .padding()
+        
+    }
+}
+
+
+
+
+
+
+
+
+struct ProjectActions: View {
+    var body: some View {
+        
+        Menu {
+                        
+            //Share
+            Button {
+                //Do something here
+            } label: {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
+            
+            //Get Info
+            Button {
+                //Do something here
+            } label: {
+                Label("Get Info", systemImage: "info.circle")
+            }
+            
+            //Rename Project
+            Button {
+                //Do something here
+            } label: {
+                Label("Rename Project", systemImage: "pencil")
+            }
+            
+            //AR View
+            Button {
+                //Do something here
+            } label: {
+                Label("AR View", systemImage: "arkit")
+            }
+            
+            Divider()
+            
+            //QR Code
+            Button {
+                //Do something here
+            } label: {
+                Label("QR Code", systemImage: "qrcode")
+            }
+            
+            //Analytics
+            Button {
+                //Do something here
+            } label: {
+                Label("Analytics", systemImage: "chart.bar")
+            }
+            
+            //Web Link
+            Button {
+                //Do something here
+            } label: {
+                Label("Web Link", systemImage: "link")
+            }
+            
+            Divider()
+            
+            //Delete
+            Button(role: .destructive) {
+                //Do something here
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+          
+            
+        } label: {
+            Label("", systemImage: "ellipsis")
+        }
+        .padding(.trailing, -16.0)
+        .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
     }
 }

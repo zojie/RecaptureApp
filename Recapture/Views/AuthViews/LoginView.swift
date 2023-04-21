@@ -15,75 +15,105 @@ struct LoginView: View {
     @State private var showLoginScreen = false
     
     var body: some View {
-        VStack(spacing: 64.0) {
-            
-            VStack {
-                TextField("Email", text: $email)
-                    .padding()
-                    .border(.gray)
-                    .cornerRadius(10)
-                    .border(.red, width: CGFloat(wrongEmail))
+        
+        ScrollView {
+            VStack(spacing: 64) {
                 
-                SecureField("Password", text: $password)
-                    .padding()
-                    .frame(width:342, height: 50)
-                    .border(.gray)
-                    .cornerRadius(10)
-                    .border(.red, width: CGFloat(wrongPassword))
-                
-                HStack {
-                    Button("Forgot Password") {
-                        //Do something here
-                    }
-                    .font(.callout)
-                    .foregroundColor(.blue)
-                    .frame(width: 342, height: 50)
-                    .background(Color("AccentColor"))
-                    .cornerRadius(10)
+                VStack {
+                    TextField("Email", text: $email)
+                        .padding()
+                        .border(.gray)
+                        .cornerRadius(10)
+                        .border(.red, width: CGFloat(wrongEmail))
                     
-                }
-            }
-                
-            VStack {
-                Button("Login") {
-                        //Do something here
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .border(.gray)
+                        .cornerRadius(10)
+                        .border(.red, width: CGFloat(wrongPassword))
+                    
+                    HStack {
+                        Button(action: {
+                            
+                        }, label: {
+                            NavigationLink(destination: ForgotPasswordView()) {
+                                    Text("Forgot Password")
+                                    .font(.callout)
+                                        .foregroundColor(.blue)
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 50.0)
+                                        .cornerRadius(10)
+                            }
+                        })
+                        
                     }
-                    .foregroundColor(.white)
-                    .frame(width: 342, height: 50)
-                    .background(.blue)
-                    .cornerRadius(10)
+                }
+                    
+                VStack {
+                    Button(action: {
+                        
+                    }, label: {
+                        NavigationLink(destination: HomeView()) {
+                                Text("Login")
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 50.0)
+                                    .background(.blue)
+                                    .cornerRadius(10)
+                        }
+                    })
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        NavigationLink(destination: SignupView()) {
+                                Text("Create Account")
+                                    .foregroundColor(.blue)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 50.0)
+                                    .cornerRadius(10)
+                        }
+                    })
+    
+                }
+                                    
                 
-                Button("Create Account") {
-                    //Do something here
+                Spacer()
+                
+                VStack(alignment: .leading) {
+                    
+                    HStack {
+                        Button(action: {
+                            
+                        }, label: {
+                            NavigationLink(destination: SignUpOptions()) {
+                                Image("GoogleLoginOption")
+                                Text("Continue with Google")
+                                    .foregroundColor(.blue)
+                            }
+                        })
+                        
+                    }
+                    Divider()
+                    Button(action: {
+                        
+                    }, label: {
+                        NavigationLink(destination: SignUpOptions()) {
+                            Image("AppleLoginOptions")
+                            Text("Continue with Apple")
+                                .foregroundColor(.blue)
+                        }
+                    })
                 }
-                .foregroundColor(.blue)
-                .frame(width: 342, height: 50)
-                .background(Color("AccentColor"))
-                .cornerRadius(10)
+                
             }
-                                
-                NavigationLink(destination: ContentView(), isActive: $showLoginScreen) {
-                    EmptyView()
-                }
-            
-            Spacer()
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    Image("GoogleLoginOption")
-                    Text("Continue with Google")
-                }
-                Divider()
-                HStack {
-                    Image("AppleLoginOptions")
-                    Text("Continue with Apple")
-                }
-            }
-            
+            .navigationTitle("Login")
+            .navigationBarTitleDisplayMode(.large)
+            .padding(.horizontal)
         }
-        .navigationTitle("Login")
-        .navigationBarTitleDisplayMode(.large)
-        .padding()
+        .offset(y:24)
+        
+        
     }
 }
 

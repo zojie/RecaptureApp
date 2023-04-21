@@ -22,10 +22,8 @@ struct ProfilePhotoView: View {
             
             //Update profile image
             VStack(spacing: 8) {
-                Text("Edit")
-                    .fontWeight(.semibold)
+                Text("Change Profile Image")
                     .foregroundColor(Color.blue)
-                    .multilineTextAlignment(.center)
                 Text("Profile photo will be used in QR code generation and as your fav icon")
                     .font(.callout)
                     .foregroundColor(Color.gray)

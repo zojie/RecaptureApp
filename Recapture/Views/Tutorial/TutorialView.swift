@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct TutorialView: View {
+    @State private var favoriteColor = 0
+    
+    
     var body: some View {
         
         VStack(alignment: .leading) {
             
-            HelpBar()
+            Picker("", selection: $favoriteColor) {
+                Text("Video Tutorials").tag(0)
+                Text("FAQ").tag(1)
+            }
+            .pickerStyle(.segmented)
+            .padding()
+            
+            
             
             
             //Notification Lists
@@ -52,6 +62,7 @@ struct TutorialView: View {
         }
         .navigationTitle("Help Center")
         .navigationBarTitleDisplayMode(.large)
+
 
     }
     

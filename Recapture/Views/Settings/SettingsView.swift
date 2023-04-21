@@ -78,53 +78,24 @@ struct SettingsView: View {
                 
             }
             
-            //3RD SECTION
-            Section(header: Text("Legal")) {
-                
-                //Privacy Policy
-                NavigationLink(destination: PrivacyView(), label: {
-                    Text("Privacy Policy")
-                })
-                
-                
-                //Terms of service
-                NavigationLink(destination: TermsView(), label: {
-                    Text("Terms of Use")
-                })
-                
-            }
             
             //4TH SECTION
             Section(header: Text("About App")) {
                 
+                //Legal
+                NavigationLink(destination: LegalView(), label: {
+                    Text("Legal")
+                })
+                
+                //About App
+                NavigationLink(destination: AboutCreatorView(), label: {
+                    Text("About RecaptureAR")
+                })
+                
                 //Creator
                 HStack {
                     Text("Created by Ehizojie Ihayere")
-                    Spacer()
-                    Image(systemName: "arrow.up.right")
-                        .foregroundColor(.blue)
-                }
-                
-                //Blog
-                HStack {
-                    Text("Visit our Blog")
-                    Spacer()
-                    Image(systemName: "arrow.up.right")
-                        .foregroundColor(.blue)
-                }
-                
-                //Learn more
-                HStack {
-                    Text("Join Twitter Community")
-                    Spacer()
-                    Image(systemName: "arrow.up.right")
-                        .foregroundColor(.blue)
-                }
-                
-                //Version
-                HStack {
-                    Text("RecaptureAR v1.0")
-                        .foregroundColor(.gray)
+//                        .foregroundColor(.blue)
                 }
                 
             }

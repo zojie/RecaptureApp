@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    
     var body: some View {
+        
+        
+        
         NavigationView {
-            VStack {
+            
+            VStack(spacing: 24.0) {
                 
-                HeaderBar()
-                
-                CardView()
-                
+                WelcomeCard()
                 ProjectListView()
+                
             }
             .navigationBarTitle("")
-//            .offset(y: 16)
             .toolbar {
                 
-//                ToolbarItemGroup(placement: .navigationBarLeading) {
-//
-//                    Button(action: {
-//
-//                    }, label: {
-//                        Image("AppLogo")
-//                    })
-//                }
                 
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
@@ -37,6 +32,17 @@ struct HomeView: View {
                         Image(systemName: "questionmark.circle")
                             .foregroundColor(.blue)
                     })
+                    
+                    NavigationLink(destination: WalletView(), label: {
+                        Image(systemName: "case")
+                            .foregroundColor(.blue)
+                    })
+                    
+                    NavigationLink(destination: OnboardingView(), label: {
+                        Image(systemName: "case")
+                            .foregroundColor(.blue)
+                    })
+
                     
                     NavigationLink(destination: NotificationView(), label: {
                         Image(systemName: "bell")

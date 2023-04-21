@@ -9,17 +9,24 @@ import SwiftUI
 
 struct OnboardingView: View {
     var body: some View {
-        NavigationView {
+        
+//        NavigationView {
+            
             VStack {
                 
                 Image("OnboardingImage")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 470.0)
+                    .background(Color(.gray))
+                    .cornerRadius(10.0)
+                    .padding(.horizontal)
                 
                 Spacer()
                 
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("AR Made Easy")
-                        .font(.title)
+                    Text("AR MADE EASY")
+                        .font(.callout)
                         .fontWeight(.bold)
                         .foregroundColor(Color.gray)
                         .tracking(-0.88)
@@ -30,35 +37,34 @@ struct OnboardingView: View {
                     Text("With Recapture, Transform multiple images to an AR model. Lorem ipsum dolor sit aghdghgdjhsghjfywgyeguyfgeyu.")
                         .lineLimit(3)
                 }
-                .padding()
+                .padding([.leading, .bottom, .trailing])
                 
-                Spacer()
                 
                 //Continue
                 Button(action: {
                     
                 }, label: {
                     NavigationLink(destination: LoginView()) {
-                        Text("Continue")
-                            .fontWeight(.semibold)
+                            Text("Continue")
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50.0)
+                                .background(.blue)
+                                .cornerRadius(10)
                     }
-                    .foregroundColor(.white)
-                    .frame(width: 342, height: 50)
-                    .background(.blue)
-                    .cornerRadius(10)
                 })
+                .padding(.horizontal)
                 
             }
-            .navigationBarTitle("Welcome")
+            .navigationTitle("Welcome")
             .navigationBarTitleDisplayMode(.inline)
-//            .offset(y: 16)
             .toolbar {
                 NavigationLink(destination: TutorialView(), label: {
                     Image(systemName: "questionmark.circle")
                         .foregroundColor(.blue)
                 })
             }
-        }
+//        }
         .accentColor(.blue)
 
     }

@@ -39,7 +39,8 @@ struct ReviewBottomButton: View {
                     Text("Process Images")
                 }
                 .foregroundColor(.white)
-                .frame(width: 342, height: 42)
+                .frame(maxWidth: .infinity)
+                .frame(height: 42)
                 .background(.blue)
                 .cornerRadius(10)
             })

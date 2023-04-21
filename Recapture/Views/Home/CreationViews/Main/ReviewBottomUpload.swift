@@ -38,10 +38,10 @@ struct ReviewBottomUpload: View {
             }, label: {
                 NavigationLink(destination: LoginView()) {
                     Text("Cancel")
-                        .fontWeight(.semibold)
                 }
                 .foregroundColor(.white)
-                .frame(width: 342, height: 42)
+                .frame(maxWidth: .infinity)
+                .frame(height: 42)
                 .background(.blue)
                 .cornerRadius(10)
             })
