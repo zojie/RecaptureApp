@@ -191,7 +191,7 @@ struct WalletHistory: View {
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "MMM dd yyyy"
         return formatter
     }()
     
