@@ -39,6 +39,11 @@ struct HomeView: View {
                     })
 
                     
+                    NavigationLink(destination: ARPreview(), label: {
+                        Image(systemName: "arkit")
+                            .foregroundColor(.blue)
+                    })
+                    
                     NavigationLink(destination: NotificationView(), label: {
                         Image(systemName: "bell")
                             .foregroundColor(.blue)
