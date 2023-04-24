@@ -34,7 +34,7 @@ struct HomeView: View {
                     })
                     
                     NavigationLink(destination: WalletView(), label: {
-                        Image(systemName: "case")
+                        Image(systemName: "creditcard")
                             .foregroundColor(.blue)
                     })
 

@@ -13,9 +13,8 @@ struct ProjectListView: View {
         VStack {
             
             ProjectHeader()
-//            ActiveProjects()
-            EmptyProject()
-            Spacer()
+            ActiveProjects()
+//            EmptyProject()
             
         }
         
@@ -70,6 +69,7 @@ struct ProjectHeader: View {
 
 
 struct ActiveProjects:View {
+    @State var isSheetShown = false
     
     var body: some View {
         //Project List
@@ -80,7 +80,7 @@ struct ActiveProjects:View {
                 HStack {
                     Image(systemName: "image")
                         .frame(width: 100, height: 100)
-                        .background(Color(.systemGray3))
+                        .background(Color(.systemGray5))
                         .cornerRadius(12)
                     
                     //Project Details
@@ -117,6 +117,31 @@ struct ActiveProjects:View {
                     //More Options
                     ProjectActions()
                 }
+                
+                
+                .swipeActions(edge: .leading) {
+                    Button { isSheetShown = true } label: {
+                            Label("Share QR", systemImage: "qrcode")
+                        }
+                        .tint(.blue)
+                        .sheet(isPresented: $isSheetShown, content: {
+                            if #available(iOS 16.0, *) {
+                                QRCodeView()
+                                    .presentationDetents([.fraction(0.8), .medium])
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                        })
+                    }
+                
+                .swipeActions(edge: .trailing) {
+                        Button(role: .destructive) {} label: {
+                            Label("Delete", systemImage: "trash")
+                        }
+                    }
+                
+                
+                
                 .contextMenu {
                     Button {
                         //Do something here
