@@ -24,7 +24,7 @@ struct TutorialView: View {
             
             
             
-            
+            FAQView()
             //Notification Lists
             List {
                 ForEach(0..<5) { item in
@@ -33,7 +33,7 @@ struct TutorialView: View {
                     HStack {
                         Image(systemName: "image")
                             .frame(width: 72, height: 72)
-                            .background(Color(#colorLiteral(red: 0.886274516582489, green: 0.886274516582489, blue: 0.8980392217636108, alpha: 1)))
+                            .background(Color(.systemGray5))
                             .cornerRadius(12)
                         
                         //Project Details
@@ -57,8 +57,13 @@ struct TutorialView: View {
                             .foregroundColor(.blue)
                     }
                 }
+                
             }
             .listStyle(.plain)
+            
+            
+           
+            
         }
         .navigationTitle("Help Center")
         .navigationBarTitleDisplayMode(.large)
@@ -73,4 +78,126 @@ struct Tutorial_Previews: PreviewProvider {
     static var previews: some View {
         TutorialView()
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct FAQView:View {
+    @State private var revealDetails = false
+    
+    var body: some View {
+        
+        VStack{
+            DisclosureGroup("How many captures can i carry out at a time", isExpanded: $revealDetails) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Lorem ipsum dolor sit amet consectetur. Consectetur lectus suspendisse amet habitasse sit. Vitae amet orci sagittis amet. Tincidunt egestas molestie facilisis at et vel blandit turpis. Mauris sit scelerisque vehicula varius vel in. Est malesuada lectus aenean suscipit. Nisl interdum pellentesque euismod et ultrices vulputate. Sit amet facilisis vel elementum tincidunt enim velit. Tortor ut tristique semper imperdiet in erat et. Venenatis aenean eget nibh volutpat adipiscing feugiat sagittis. Sollicitudin quisque libero sed leo egestas suspendisse nam.")
+                        .font(.callout)
+                    Button("Close Accordion") {
+                        revealDetails.toggle()
+                    }
+                }
+                .padding(.top)
+                
+            }
+            
+            
+            
+//            DisclosureGroup("How many captures can i carry out at a time", isExpanded: $revealDetails) {
+//                VStack(alignment: .leading, spacing: 8) {
+//                    Text("Lorem ipsum dolor sit amet consectetur. Consectetur lectus suspendisse amet habitasse sit. Vitae amet orci sagittis amet. Tincidunt egestas molestie facilisis at et vel blandit turpis. Mauris sit scelerisque vehicula varius vel in. Est malesuada lectus aenean suscipit. Nisl interdum pellentesque euismod et ultrices vulputate. Sit amet facilisis vel elementum tincidunt enim velit. Tortor ut tristique semper imperdiet in erat et. Venenatis aenean eget nibh volutpat adipiscing feugiat sagittis. Sollicitudin quisque libero sed leo egestas suspendisse nam.")
+//                        .font(.callout)
+//                    Button("Close Accordion") {
+//                        revealDetails.toggle()
+//                    }
+//                }
+//                .padding(.top)
+//                
+//            }
+//            
+//            
+//            DisclosureGroup("How many captures can i carry out at a time", isExpanded: $revealDetails) {
+//                VStack(alignment: .leading, spacing: 8) {
+//                    Text("Lorem ipsum dolor sit amet consectetur. Consectetur lectus suspendisse amet habitasse sit. Vitae amet orci sagittis amet. Tincidunt egestas molestie facilisis at et vel blandit turpis. Mauris sit scelerisque vehicula varius vel in. Est malesuada lectus aenean suscipit. Nisl interdum pellentesque euismod et ultrices vulputate. Sit amet facilisis vel elementum tincidunt enim velit. Tortor ut tristique semper imperdiet in erat et. Venenatis aenean eget nibh volutpat adipiscing feugiat sagittis. Sollicitudin quisque libero sed leo egestas suspendisse nam.")
+//                        .font(.callout)
+//                    Button("Close Accordion") {
+//                        revealDetails.toggle()
+//                    }
+//                }
+//                .padding(.top)
+//                
+//            }
+//            
+//            
+//            
+//            DisclosureGroup("How many captures can i carry out at a time", isExpanded: $revealDetails) {
+//                VStack(alignment: .leading, spacing: 8) {
+//                    Text("Lorem ipsum dolor sit amet consectetur. Consectetur lectus suspendisse amet habitasse sit. Vitae amet orci sagittis amet. Tincidunt egestas molestie facilisis at et vel blandit turpis. Mauris sit scelerisque vehicula varius vel in. Est malesuada lectus aenean suscipit. Nisl interdum pellentesque euismod et ultrices vulputate. Sit amet facilisis vel elementum tincidunt enim velit. Tortor ut tristique semper imperdiet in erat et. Venenatis aenean eget nibh volutpat adipiscing feugiat sagittis. Sollicitudin quisque libero sed leo egestas suspendisse nam.")
+//                        .font(.callout)
+//                    Button("Close Accordion") {
+//                        revealDetails.toggle()
+//                    }
+//                }
+//                .padding(.top)
+//                
+//            }
+//            
+//            
+//            
+//            DisclosureGroup("How many captures can i carry out at a time", isExpanded: $revealDetails) {
+//                VStack(alignment: .leading, spacing: 8) {
+//                    Text("Lorem ipsum dolor sit amet consectetur. Consectetur lectus suspendisse amet habitasse sit. Vitae amet orci sagittis amet. Tincidunt egestas molestie facilisis at et vel blandit turpis. Mauris sit scelerisque vehicula varius vel in. Est malesuada lectus aenean suscipit. Nisl interdum pellentesque euismod et ultrices vulputate. Sit amet facilisis vel elementum tincidunt enim velit. Tortor ut tristique semper imperdiet in erat et. Venenatis aenean eget nibh volutpat adipiscing feugiat sagittis. Sollicitudin quisque libero sed leo egestas suspendisse nam.")
+//                        .font(.callout)
+//                    Button("Close Accordion") {
+//                        revealDetails.toggle()
+//                    }
+//                }
+//                .padding(.top)
+//                
+//            }
+//            
+//            
+//            
+//            DisclosureGroup("How many captures can i carry out at a time", isExpanded: $revealDetails) {
+//                VStack(alignment: .leading, spacing: 8) {
+//                    Text("Lorem ipsum dolor sit amet consectetur. Consectetur lectus suspendisse amet habitasse sit. Vitae amet orci sagittis amet. Tincidunt egestas molestie facilisis at et vel blandit turpis. Mauris sit scelerisque vehicula varius vel in. Est malesuada lectus aenean suscipit. Nisl interdum pellentesque euismod et ultrices vulputate. Sit amet facilisis vel elementum tincidunt enim velit. Tortor ut tristique semper imperdiet in erat et. Venenatis aenean eget nibh volutpat adipiscing feugiat sagittis. Sollicitudin quisque libero sed leo egestas suspendisse nam.")
+//                        .font(.callout)
+//                    Button("Close Accordion") {
+//                        revealDetails.toggle()
+//                    }
+//                }
+//                .padding(.top)
+//                
+//            }
+//            
+//            
+//            
+//            DisclosureGroup("How many captures can i carry out at a time", isExpanded: $revealDetails) {
+//                VStack(alignment: .leading, spacing: 8) {
+//                    Text("Lorem ipsum dolor sit amet consectetur. Consectetur lectus suspendisse amet habitasse sit. Vitae amet orci sagittis amet. Tincidunt egestas molestie facilisis at et vel blandit turpis. Mauris sit scelerisque vehicula varius vel in. Est malesuada lectus aenean suscipit. Nisl interdum pellentesque euismod et ultrices vulputate. Sit amet facilisis vel elementum tincidunt enim velit. Tortor ut tristique semper imperdiet in erat et. Venenatis aenean eget nibh volutpat adipiscing feugiat sagittis. Sollicitudin quisque libero sed leo egestas suspendisse nam.")
+//                        .font(.callout)
+//                    Button("Close Accordion") {
+//                        revealDetails.toggle()
+//                    }
+//                }
+//                .padding(.top)
+//                
+//            }
+            
+        }
+        .padding(.horizontal)
+    }
+    
 }

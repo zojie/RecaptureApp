@@ -10,114 +10,15 @@ import SwiftUI
 struct ProjectListView: View {    
     var body: some View {
         
-        VStack(alignment: .leading) {
+        VStack {
             
-            //Controllers
             ProjectHeader()
+//            ActiveProjects()
+            EmptyProject()
+            Spacer()
             
-            //Project List
-            List {
-                ForEach(0..<5) { item in
-                    
-                    //Image AR View
-                    HStack {
-                        Image(systemName: "image")
-                            .frame(width: 100, height: 100)
-                            .background(.gray)
-                            .cornerRadius(12)
-                        
-                        //Project Details
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Full name of project with a max of two lines and more, i want it auto truncated into two lines")
-                                .font(.body)
-                                .fontWeight(.semibold)
-                                .lineLimit(2)
-                            
-                            
-                            VStack(alignment: .leading) {
-                                Text ("Created Jun 19, 2022")
-                                    .font(.subheadline)
-                                Text ("Last edit 2 minutes ago")
-                                    .font(.subheadline)
-                                
-                            }
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                            
-                            
-                            HStack(spacing: 4) {
-                                Text ("18MB")
-                                Text ("•")
-                                Text ("42 Images")
-                            }
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                        }
-                        .padding(.vertical)
-                        
-                        Spacer()
-                        
-                        //More Options
-                        ProjectActions()
-                    }
-                    .contextMenu {
-                        Button {
-                            //Do something here
-                        } label: {
-                            Label("Share", systemImage: "square.and.arrow.up")
-                        }
-                        
-                        Button {
-                            //Do something here
-                        } label: {
-                            Label("Get Info", systemImage: "info.circle")
-                        }
-                        
-                        Button {
-                            //Do something here
-                        } label: {
-                            Label("Rename Project", systemImage: "pencil")
-                        }
-                        
-                        Button {
-                            //Do something here
-                        } label: {
-                            Label("AR View", systemImage: "arkit")
-                        }
-                        
-                        Divider()
-                        
-                        Button {
-                            //Do something here
-                        } label: {
-                            Label("QR Code", systemImage: "qrcode")
-                        }
-                        
-                        Button {
-                            //Do something here
-                        } label: {
-                            Label("Analytics", systemImage: "chart.bar")
-                        }
-                        
-                        Button {
-                            //Do something here
-                        } label: {
-                            Label("Web Link", systemImage: "link")
-                        }
-                        
-                        Divider()
-                        
-                        Button(role: .destructive) {
-                            //Do something here
-                        } label: {
-                            Label("Delete", systemImage: "trash")
-                        }
-                    }
-                }
-            }
-            .padding(.top, -16.0)
-            .listStyle(.plain)
         }
+        
     }
 }
 
@@ -159,6 +60,124 @@ struct ProjectHeader: View {
     }
 }
 
+
+
+
+
+
+
+
+
+
+struct ActiveProjects:View {
+    
+    var body: some View {
+        //Project List
+        List {
+            ForEach(0..<5) { item in
+                
+                //Image AR View
+                HStack {
+                    Image(systemName: "image")
+                        .frame(width: 100, height: 100)
+                        .background(Color(.systemGray3))
+                        .cornerRadius(12)
+                    
+                    //Project Details
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Full name of project with a max of two lines and more, i want it auto truncated into two lines")
+                            .font(.body)
+                            .fontWeight(.semibold)
+                            .lineLimit(2)
+                        
+                        
+                        VStack(alignment: .leading) {
+                            Text ("Created Jun 19, 2022")
+                                .font(.subheadline)
+                            Text ("Last edit 2 minutes ago")
+                                .font(.subheadline)
+                            
+                        }
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        
+                        
+                        HStack(spacing: 4) {
+                            Text ("18MB")
+                            Text ("•")
+                            Text ("42 Images")
+                        }
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                    }
+                    .padding(.vertical)
+                    
+                    Spacer()
+                    
+                    //More Options
+                    ProjectActions()
+                }
+                .contextMenu {
+                    Button {
+                        //Do something here
+                    } label: {
+                        Label("Share", systemImage: "square.and.arrow.up")
+                    }
+                    
+                    Button {
+                        //Do something here
+                    } label: {
+                        Label("Get Info", systemImage: "info.circle")
+                    }
+                    
+                    Button {
+                        //Do something here
+                    } label: {
+                        Label("Rename Project", systemImage: "pencil")
+                    }
+                    
+                    Button {
+                        //Do something here
+                    } label: {
+                        Label("AR View", systemImage: "arkit")
+                    }
+                    
+                    Divider()
+                    
+                    Button {
+                        //Do something here
+                    } label: {
+                        Label("QR Code", systemImage: "qrcode")
+                    }
+                    
+                    Button {
+                        //Do something here
+                    } label: {
+                        Label("Analytics", systemImage: "chart.bar")
+                    }
+                    
+                    Button {
+                        //Do something here
+                    } label: {
+                        Label("Web Link", systemImage: "link")
+                    }
+                    
+                    Divider()
+                    
+                    Button(role: .destructive) {
+                        //Do something here
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
+            }
+        }
+        .padding(.top, -16.0)
+        .listStyle(.plain)
+
+    }
+    
+}
 
 
 
@@ -238,4 +257,44 @@ struct ProjectActions: View {
         .padding(.trailing, -16.0)
         .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+struct EmptyProject: View {
+    
+    var body: some View{
+        
+        VStack(alignment: .center, spacing: 24) {
+            ZStack {
+                Rectangle()
+                    .foregroundColor(Color(.systemGray5))
+                    .frame(width: 80, height: 80)
+                .mask(Circle())
+                Image(systemName: "arkit")
+                    .resizable()
+                    .frame(width: 35, height: 40)
+                    
+            }
+            VStack(spacing: 12.0) {
+                Text("No Active Project")
+                    .fontWeight(.medium)
+                Text("After you process your photo captures, your project will be displayed here. To begin, simply tap on the purple button above to get started.")
+                    .font(.callout)
+                    .foregroundColor(Color.gray)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+            }
+        }
+        .padding(.top, 42.0)
+    }
+    
 }

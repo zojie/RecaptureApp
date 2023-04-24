@@ -18,11 +18,10 @@ struct WalletView: View {
             //Wallet
             VStack(spacing: 16.0) {
                 HStack {
-                    VStack(alignment: .leading, spacing: 24.0) {
+                    VStack(alignment: .leading, spacing: 12.0) {
                         VStack(alignment: .leading, spacing: 3.0) {
                             Text("WALLET BALANCE")
                                 .font(.caption)
-                                .fontWeight(.regular)
                                 .foregroundColor(Color.gray)
                                 .tracking(-0.4)
                             Text("N200,000")
@@ -30,17 +29,15 @@ struct WalletView: View {
                                 .fontWeight(.bold)
                                 .tracking(-0.4)
                         }
-                        HStack(spacing: 4.0) {
+                        VStack(alignment: .leading, spacing: 4.0) {
                             Text("Payment powered by Paystack")
                                 .font(.caption)
-                                .fontWeight(.regular)
                                 .foregroundColor(Color.gray)
                             Button {
                                 //Do something here
                             } label: {
                                 Text("Learn More")
                                     .font(.caption)
-                                    .fontWeight(.regular)
                             }
                         }
                         
@@ -48,12 +45,18 @@ struct WalletView: View {
                     }
                     .padding(.horizontal)
                     Spacer()
+                    Image("PaystackLogo")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .padding(.trailing)
+                        .opacity(0.7)
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: 140.0)
-                .background(Color(hue: 0.495, saturation: 0.096, brightness: 0.925))
+                .background(Color(.systemGray5))
                 .cornerRadius(10.0)
                 .padding([.top, .leading, .trailing])
+                
                 
                 
                 
@@ -68,7 +71,7 @@ struct WalletView: View {
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 50.0)
-                                    .background(.blue)
+                                    .background(Color(red: 0.047, green: 0.641, blue: 0.859))
                                     .cornerRadius(10)
                             }
                         }
@@ -83,7 +86,7 @@ struct WalletView: View {
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 50.0)
-                                    .background(.mint)
+                                    .background(Color(hue: 0.485, saturation: 0.949, brightness: 0.726))
                                     .cornerRadius(10)
                             }
                         }
@@ -123,7 +126,7 @@ struct WalletView: View {
                             }
                             .frame(width: 80.0)
                             .frame(height: 36.0)
-                            .background(Color(#colorLiteral(red: 0.886274516582489, green: 0.886274516582489, blue: 0.8980392217636108, alpha: 1)))
+                            .background(Color(.systemGray5))
                             .cornerRadius(10)
                         }
                 }
@@ -177,11 +180,10 @@ struct WalletHistory: View {
                 HStack {
                     ZStack {
                         Rectangle()
-                            .foregroundColor(.mint)
+                            .foregroundColor(Color(.systemGray5))
                             .frame(width: 40.0, height: 40.0)
                         .mask(Circle())
-                        Image(systemName: "arrowshape.right.fill")
-                            .foregroundColor(Color.white)
+                        Image(systemName: "checkmark")
                     }
                     
                     VStack(alignment:.leading){

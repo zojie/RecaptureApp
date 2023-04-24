@@ -15,11 +15,6 @@ struct OnboardingView: View {
             VStack {
                 
                 Image("OnboardingImage")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 470.0)
-                    .background(Color(.gray))
-                    .cornerRadius(10.0)
-                    .padding(.horizontal)
                 
                 Spacer()
                 
@@ -35,6 +30,7 @@ struct OnboardingView: View {
                         .fontWeight(.bold)
                         .tracking(-0.88)
                     Text("With Recapture, Transform multiple images to an AR model. Lorem ipsum dolor sit aghdghgdjhsghjfywgyeguyfgeyu.")
+                        .multilineTextAlignment(.leading)
                         .lineLimit(3)
                 }
                 .padding([.leading, .bottom, .trailing])

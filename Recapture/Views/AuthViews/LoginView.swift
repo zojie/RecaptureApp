@@ -23,13 +23,13 @@ struct LoginView: View {
                     TextField("Email", text: $email)
                         .padding()
                         .border(.gray)
-                        .cornerRadius(10)
+                        .cornerRadius(12)
                         .border(.red, width: CGFloat(wrongEmail))
                     
                     SecureField("Password", text: $password)
                         .padding()
                         .border(.gray)
-                        .cornerRadius(10)
+                        .cornerRadius(12)
                         .border(.red, width: CGFloat(wrongPassword))
                     
                     HStack {
@@ -48,7 +48,14 @@ struct LoginView: View {
                         
                     }
                 }
-                    
+                
+//                RoundedRectangle (cornerRadius: 8)
+//                    .stroke (lineWidth: 2)
+//                    .fill (Color.gray)
+//                    .frame(maxWidth: .infinity)
+//                    .frame (height: 50)
+//                    .cornerRadius (8)
+                
                 VStack {
                     Button(action: {
                         

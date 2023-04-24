@@ -26,7 +26,7 @@ struct AboutCreatorView: View {
                     VStack(alignment: .leading, spacing: 32.0) {
                         VStack(alignment:.leading, spacing: 16) {
                             VStack(alignment:.leading, spacing: 8) {
-                                Text("Creator")
+                                Text("Creators Note")
                                 Text("As a product designer, I've always been passionate about exploring new technologies and pushing the boundaries of what's possible. With this app, I've had the opportunity to dive deeper into iOS development and learn so much along the way. I'm especially grateful to finally put my research on augmented reality to practical use, and I hope that this app will inspire others to embrace the power of technology and design to create meaningful experiences.")
                                     .font(.callout)
                                     .foregroundColor(.gray)

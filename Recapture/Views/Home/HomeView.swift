@@ -37,11 +37,6 @@ struct HomeView: View {
                         Image(systemName: "case")
                             .foregroundColor(.blue)
                     })
-                    
-                    NavigationLink(destination: OnboardingView(), label: {
-                        Image(systemName: "case")
-                            .foregroundColor(.blue)
-                    })
 
                     
                     NavigationLink(destination: NotificationView(), label: {
