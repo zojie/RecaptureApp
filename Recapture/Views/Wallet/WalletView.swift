@@ -31,13 +31,13 @@ struct WalletView: View {
                         }
                         VStack(alignment: .leading, spacing: 4.0) {
                             Text("Payment powered by Paystack")
-                                .font(.caption)
+                                .font(.footnote)
                                 .foregroundColor(Color.gray)
                             Button {
                                 //Do something here
                             } label: {
                                 Text("Learn More")
-                                    .font(.caption)
+                                    .font(.footnote)
                             }
                         }
                         
@@ -164,6 +164,14 @@ struct WalletView_Previews: PreviewProvider {
 
 
 
+struct WalletItem: Identifiable {
+    let id = UUID()
+    let title = "Process Reality"
+    var status: String
+    var date: Date
+    var currency: String
+    var amount: Int
+}
 
 
 
@@ -171,41 +179,53 @@ struct WalletView_Previews: PreviewProvider {
 
 
 struct WalletHistory: View {
+    @State var walletItems = [
+        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
+        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
+        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
+        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
+        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
+        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
+        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000)
+    ]
+    
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter
+    }()
+    
     var body: some View {
         
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-            Button {
-                //Do something here
-            } label: {
-                HStack {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color(.systemGray5))
-                            .frame(width: 40.0, height: 40.0)
+        
+        List(walletItems) { item in
+            HStack {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(Color(.systemGray5))
+                        .frame(width: 40.0, height: 40.0)
                         .mask(Circle())
-                        Image(systemName: "checkmark")
-                    }
-                    
-                    VStack(alignment:.leading){
-                        Text("Process Reality")
-                            .font(.body)
-                            .fontWeight(.medium)
-                        HStack(spacing: 4.0) {
-                            Text("Successfull")
-                                .font(.subheadline)
-                                .foregroundColor(Color.gray)
-                            Text ("•")
-                                .foregroundColor(Color.gray)
-                            Text("07/01/2023")
-                                .font(.subheadline)
-                                .foregroundColor(Color.gray)
-                        }
-                    }
-                    Spacer()
-                    Text("N30,000")
+                    Image(systemName: "checkmark")
                 }
+                
+                VStack(alignment:.leading){
+                    Text(item.title)
+                        .font(.body)
+                        .fontWeight(.medium)
+                    HStack(spacing: 4.0) {
+                        Text(item.status)
+                            .font(.subheadline)
+                            .foregroundColor(Color.gray)
+                        Text ("•")
+                            .foregroundColor(Color.gray)
+                        Text("\(dateFormatter.string(from: item.date))")
+                            .font(.subheadline)
+                            .foregroundColor(Color.gray)
+                    }
+                }
+                Spacer()
+                Text("\(item.currency)\(item.amount)")
             }
-            
         }
         .listStyle(.plain)
         

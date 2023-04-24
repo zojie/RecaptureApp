@@ -38,7 +38,6 @@ struct SettingsView: View {
                 //Account
                 NavigationLink(destination: AccountView(), label: {
                     Text("Account")
-                    
                 })
                 
                 

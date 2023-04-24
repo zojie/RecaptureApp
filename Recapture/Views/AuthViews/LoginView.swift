@@ -96,7 +96,7 @@ struct LoginView: View {
                             NavigationLink(destination: SignUpOptions()) {
                                 Image("GoogleLoginOption")
                                 Text("Continue with Google")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(.black)
                             }
                         })
                         
@@ -108,7 +108,7 @@ struct LoginView: View {
                         NavigationLink(destination: SignUpOptions()) {
                             Image("AppleLoginOptions")
                             Text("Continue with Apple")
-                                .foregroundColor(.blue)
+                                .foregroundColor(.black)
                         }
                     })
                 }

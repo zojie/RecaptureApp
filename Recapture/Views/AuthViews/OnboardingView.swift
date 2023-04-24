@@ -25,11 +25,11 @@ struct OnboardingView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.gray)
                         .tracking(-0.88)
-                    Text("Turn photos into high‑quality AR")
+                    Text("Create high quality 3D AR Model from Photos")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .tracking(-0.88)
-                    Text("With Recapture, Transform multiple images to an AR model. Lorem ipsum dolor sit aghdghgdjhsghjfywgyeguyfgeyu.")
+                    Text("With RecaptureAR, convert your still photos into high-quality 3Dff AR models and create experineces in a whole new way maximumm.")
                         .multilineTextAlignment(.leading)
                         .lineLimit(3)
                 }

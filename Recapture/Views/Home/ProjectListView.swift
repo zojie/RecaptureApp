@@ -42,6 +42,7 @@ struct ProjectListView_Previews: PreviewProvider {
 
 
 
+
 struct ProjectHeader: View {
     @State private var favoriteColor = 0
     
@@ -68,58 +69,93 @@ struct ProjectHeader: View {
 
 
 
+
+
+
+
+struct ProjectItem: Identifiable {
+    let id = UUID()
+    var image: String
+    var title: String
+    var created: Date
+    var lastEdit: Date
+    var projectSize: Int
+    var imageCount: Int
+}
+
+
+
+
+
+
+
+
+
+
+
+
 struct ActiveProjects:View {
+    @State var projectItems = [
+        ProjectItem(image: "PizzaImage", title: "Peperoni Crusted Pizza", created: Date(), lastEdit: Date(), projectSize: 46, imageCount: 26),
+        ProjectItem(image: "WaterBottle", title: "Gym Water Bottle", created: Date(), lastEdit: Date(), projectSize: 32, imageCount: 30),
+        ProjectItem(image: "Nivea", title: "Nivea Body Cream", created: Date(), lastEdit: Date(), projectSize: 18, imageCount: 42),
+        ProjectItem(image: "BeachHat", title: "Beach Hat", created: Date(), lastEdit: Date(), projectSize: 18, imageCount: 42)
+    ]
+    
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, HH:mm"
+        return formatter
+    }()
+    
+    
     @State var isSheetShown = false
     
     var body: some View {
         //Project List
-        List {
-            ForEach(0..<5) { item in
+        List(projectItems) { item in
+            HStack {
+                Image(item.image)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(12)
                 
-                //Image AR View
-                HStack {
-                    Image(systemName: "image")
-                        .frame(width: 100, height: 100)
-                        .background(Color(.systemGray5))
-                        .cornerRadius(12)
+                //Project Details
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(item.title)
+                        .font(.body)
+                        .fontWeight(.semibold)
+                        .lineLimit(2)
                     
-                    //Project Details
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Full name of project with a max of two lines and more, i want it auto truncated into two lines")
-                            .font(.body)
-                            .fontWeight(.semibold)
-                            .lineLimit(2)
+                    
+                    VStack(alignment: .leading) {
+                        Text ("Created \(dateFormatter.string(from: item.created))")
+                            .font(.subheadline)
+                        Text ("Last Edited \(dateFormatter.string(from: item.lastEdit))")
+                            .font(.subheadline)
                         
-                        
-                        VStack(alignment: .leading) {
-                            Text ("Created Jun 19, 2022")
-                                .font(.subheadline)
-                            Text ("Last edit 2 minutes ago")
-                                .font(.subheadline)
-                            
-                        }
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        
-                        
-                        HStack(spacing: 4) {
-                            Text ("18MB")
-                            Text ("•")
-                            Text ("42 Images")
-                        }
-                        .font(.footnote)
-                        .foregroundColor(.gray)
                     }
-                    .padding(.vertical)
+                    .font(.footnote)
+                    .foregroundColor(.gray)
                     
-                    Spacer()
                     
-                    //More Options
-                    ProjectActions()
+                    HStack(spacing: 4) {
+                        Text ("\(item.projectSize)MB")
+                        Text ("•")
+                        Text ("\(item.imageCount) Images")
+                    }
+                    .font(.footnote)
+                    .foregroundColor(.gray)
                 }
+                .padding(.vertical)
                 
+                Spacer()
                 
-                .swipeActions(edge: .leading) {
+                //More Options
+                ProjectActions()
+            }
+            
+            .swipeActions(edge: .leading) {
                     Button { isSheetShown = true } label: {
                             Label("Share QR", systemImage: "qrcode")
                         }
@@ -133,69 +169,68 @@ struct ActiveProjects:View {
                             }
                         })
                     }
-                
+
                 .swipeActions(edge: .trailing) {
                         Button(role: .destructive) {} label: {
                             Label("Delete", systemImage: "trash")
                         }
                     }
-                
-                
-                
+
+
+
                 .contextMenu {
                     Button {
                         //Do something here
                     } label: {
                         Label("Share", systemImage: "square.and.arrow.up")
                     }
-                    
+
                     Button {
                         //Do something here
                     } label: {
                         Label("Get Info", systemImage: "info.circle")
                     }
-                    
+
                     Button {
                         //Do something here
                     } label: {
                         Label("Rename Project", systemImage: "pencil")
                     }
-                    
+
                     Button {
                         //Do something here
                     } label: {
                         Label("AR View", systemImage: "arkit")
                     }
-                    
+
                     Divider()
-                    
+
                     Button {
                         //Do something here
                     } label: {
                         Label("QR Code", systemImage: "qrcode")
                     }
-                    
+
                     Button {
                         //Do something here
                     } label: {
                         Label("Analytics", systemImage: "chart.bar")
                     }
-                    
+
                     Button {
                         //Do something here
                     } label: {
                         Label("Web Link", systemImage: "link")
                     }
-                    
+
                     Divider()
-                    
+
                     Button(role: .destructive) {
                         //Do something here
                     } label: {
                         Label("Delete", systemImage: "trash")
                     }
                 }
-            }
         }
         .padding(.top, -16.0)
         .listStyle(.plain)
@@ -203,6 +238,14 @@ struct ActiveProjects:View {
     }
     
 }
+
+
+
+
+
+
+
+
 
 
 

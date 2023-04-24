@@ -47,7 +47,7 @@ struct AnalyticsView: View {
                         
                         //iOS
                         HStack {
-                            Image("OnboardingImage")
+                            Image("AppleLoginOptions")
                                 .frame(width: 32.0, height: 32.0)
                                 .mask(Circle())
                             VStack(alignment: .leading, spacing: 4) {
@@ -61,7 +61,7 @@ struct AnalyticsView: View {
                         
                         //Android
                         HStack {
-                            Image("OnboardingImage")
+                            Image("GoogleLoginOption")
                                 .frame(width: 32.0, height: 32.0)
                                 .mask(Circle())
                             VStack(alignment: .leading, spacing: 4) {
