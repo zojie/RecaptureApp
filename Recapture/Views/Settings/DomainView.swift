@@ -38,6 +38,7 @@ struct DomainView: View {
             }) {
                 VStack(alignment: .leading) {
                     TextField("example.com", text: $domain)
+                        .keyboardType(.URL)
                     Text("Enter domain name")
                         .font(.footnote)
                         .foregroundColor(.gray)

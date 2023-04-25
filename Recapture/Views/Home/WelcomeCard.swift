@@ -10,6 +10,7 @@ import SwiftUI
 struct WelcomeCard: View {
     @StateObject var cardViewModel = CardViewModel()
     
+    
     var body: some View {
         VStack(spacing:24) {
             
@@ -50,7 +51,7 @@ struct WelcomeCard: View {
             HStack {
                 NavigationLink(destination: CaptureARView(projectName: $cardViewModel.projectName), tag: 1, selection: $cardViewModel.selectionForCaptureARView) {
                     Button(action: {
-                        alertTextField(title: "Project Name", message: "", hintText: "Untitled", primaryTitle: "Continue", secondaryTitle: "Cancel") { text in
+                        alertTextField(title: "Create New Project", message: "Enter a name to title your project", hintText: "Untitled", primaryTitle: "Continue", secondaryTitle: "Cancel") { text in
                             cardViewModel.setProjectName(as: text)
                             cardViewModel.setSelectionForCaptureARView()
                         } secondaryAction: {
@@ -73,7 +74,8 @@ struct WelcomeCard: View {
                         
                     })
                     .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width * 0.6, height: 162)
+                    .frame(width: UIScreen.main.bounds.width * 0.6)
+                    .frame(height: 162)
                     .background(LinearGradient(
                         gradient: Gradient(stops: [
                             .init(color: Color(#colorLiteral(red: 0, green: 0.47843137383461, blue: 1, alpha: 1)), location: 0),
@@ -94,7 +96,8 @@ struct WelcomeCard: View {
                         .fontWeight(.semibold)
                 }
                 .padding(4.0)
-                .frame(width: UIScreen.main.bounds.width * 0.3, height: 162)
+                .frame(width: UIScreen.main.bounds.width * 0.3)
+                .frame(height: 162)
                 .background(Color(.systemGray5))
                 .cornerRadius(12)
             }

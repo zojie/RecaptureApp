@@ -21,6 +21,7 @@ struct LoginView: View {
                 
                 VStack {
                     TextField("Email", text: $email)
+                        .keyboardType(.emailAddress)
                         .padding()
                         .border(.gray)
                         .cornerRadius(12)

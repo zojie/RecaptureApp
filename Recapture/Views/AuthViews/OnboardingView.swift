@@ -12,44 +12,48 @@ struct OnboardingView: View {
         
 //        NavigationView {
             
-            VStack {
+        VStack(spacing: 56) {
                 
-                Image("OnboardingImage")
-                
-                Spacer()
-                
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("AR MADE EASY")
-                        .font(.callout)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.gray)
-                        .tracking(-0.88)
-                    Text("Create high quality 3D AR Model from Photos")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .tracking(-0.88)
-                    Text("With RecaptureAR, convert your still photos into high-quality 3Dff AR models and create experineces in a whole new way maximumm.")
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(3)
-                }
-                .padding([.leading, .bottom, .trailing])
+                Image("PizzaImage")
+                    .resizable()
                 
                 
-                //Continue
-                Button(action: {
-                    
-                }, label: {
-                    NavigationLink(destination: LoginView()) {
-                            Text("Continue")
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50.0)
-                                .background(.blue)
-                                .cornerRadius(10)
+                
+                VStack {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("AR MADE EASY")
+                            .font(.callout)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .tracking(-0.88)
+                        Text("Create high quality 3D AR Model from Photos")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .tracking(-0.88)
+                        Text("With RecaptureAR, convert your still photos into high-quality 3Dff AR models and create experineces in a whole new way maximumm.")
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(3)
                     }
-                })
-                .padding(.horizontal)
+                    .padding([.leading, .bottom, .trailing])
+                    
+                    //Continue
+                    Button(action: {
+                        
+                    }, label: {
+                        NavigationLink(destination: LoginView()) {
+                                Text("Continue")
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 50.0)
+                                    .background(.blue)
+                                    .cornerRadius(10)
+                        }
+                    })
+                    .padding(.horizontal)
+                }
+                
+                
+                
                 
             }
             .navigationTitle("Welcome")

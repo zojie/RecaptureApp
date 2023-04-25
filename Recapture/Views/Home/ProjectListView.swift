@@ -109,45 +109,50 @@ struct ActiveProjects:View {
     var body: some View {
         //Project List
         List(projectItems) { item in
-            HStack {
-                Image(item.image)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .cornerRadius(12)
-                
-                //Project Details
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(item.title)
-                        .font(.body)
-                        .fontWeight(.semibold)
-                        .lineLimit(2)
+            Button {
+                //
+            } label: {
+                HStack {
+                    Image(item.image)
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .cornerRadius(12)
                     
-                    
-                    VStack(alignment: .leading) {
-                        Text ("Created \(dateFormatter.string(from: item.created))")
-                            .font(.subheadline)
-                        Text ("Last Edited \(dateFormatter.string(from: item.lastEdit))")
-                            .font(.subheadline)
+                    //Project Details
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(item.title)
+                            .font(.body)
+                            .fontWeight(.semibold)
+                            .lineLimit(2)
                         
+                        
+                        VStack(alignment: .leading) {
+                            Text ("Created \(dateFormatter.string(from: item.created))")
+                                .font(.subheadline)
+                            Text ("Last Edited \(dateFormatter.string(from: item.lastEdit))")
+                                .font(.subheadline)
+                            
+                        }
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        
+                        
+                        HStack(spacing: 4) {
+                            Text ("\(item.projectSize)MB")
+                            Text ("•")
+                            Text ("\(item.imageCount) Images")
+                        }
+                        .font(.footnote)
+                        .foregroundColor(.gray)
                     }
-                    .font(.footnote)
-                    .foregroundColor(.gray)
+                    .padding(.vertical)
+//                    WelcomeCard(numberOfProject: projectItems.count)
                     
+                    Spacer()
                     
-                    HStack(spacing: 4) {
-                        Text ("\(item.projectSize)MB")
-                        Text ("•")
-                        Text ("\(item.imageCount) Images")
-                    }
-                    .font(.footnote)
-                    .foregroundColor(.gray)
+                    //More Options
+                    ProjectActions()
                 }
-                .padding(.vertical)
-                
-                Spacer()
-                
-                //More Options
-                ProjectActions()
             }
             
             .swipeActions(edge: .leading) {

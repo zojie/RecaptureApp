@@ -17,8 +17,9 @@ struct WebLinkView: View {
                 
                 //Code snippet
                 Text("<iframe src=google.com/pi/39848 hgjhdgshjhvh   cxbjhvbcvhcbvjhcbvhjc     bvhjcbvhjcbvjxhbzvxhbhjx   cvhjcbvjcvhcjvbcjxvcj .vbjcbvjxcbjvcbvjcxvbcjxhvbcvasvyug")
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                    .frame(width: 348, height: 200)
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 200)
                     .background(Color(.systemGray5))
                     .cornerRadius(10)
                 

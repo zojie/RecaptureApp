@@ -33,6 +33,7 @@ struct AccountView: View {
                 
                 VStack(alignment: .leading) {
                     TextField("iszojie@gmail", text: $email)
+                        .keyboardType(.emailAddress)
                     Text("Email Address")
                         .font(.footnote)
                         .foregroundColor(.gray)
