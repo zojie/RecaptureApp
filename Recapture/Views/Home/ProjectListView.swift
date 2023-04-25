@@ -7,14 +7,30 @@
 
 import SwiftUI
 
-struct ProjectListView: View {    
+struct ProjectListView: View {
+    @State private var segmentedProject = 0
+    
+    
     var body: some View {
         
         VStack {
             
-            ProjectHeader()
-            ActiveProjects()
-//            EmptyProject()
+            Picker("", selection: $segmentedProject) {
+                Text("Projects").tag(0)
+                Text("Drafts").tag(1)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
+            
+                if (segmentedProject == 0) {
+                    ActiveProjects()
+                }
+                if (segmentedProject == 1) {
+                    EmptyProject()
+                }
+            
+            
             
         }
         
@@ -43,22 +59,6 @@ struct ProjectListView_Previews: PreviewProvider {
 
 
 
-struct ProjectHeader: View {
-    @State private var favoriteColor = 0
-    
-    var body: some View {
-        
-        VStack {
-                Picker("What is your favorite color?", selection: $favoriteColor) {
-                    Text("Project").tag(0)
-                    Text("Draft (3)").tag(1)
-                }
-                .pickerStyle(.segmented)
-            }
-            .padding()
-        
-    }
-}
 
 
 
@@ -67,12 +67,7 @@ struct ProjectHeader: View {
 
 
 
-
-
-
-
-
-
+//Data Model
 struct ProjectItem: Identifiable {
     let id = UUID()
     var image: String
@@ -341,28 +336,30 @@ struct EmptyProject: View {
     
     var body: some View{
         
-        VStack(alignment: .center, spacing: 24) {
-            ZStack {
-                Rectangle()
-                    .foregroundColor(Color(.systemGray5))
-                    .frame(width: 80, height: 80)
-                .mask(Circle())
-                Image(systemName: "arkit")
-                    .resizable()
-                    .frame(width: 35, height: 40)
-                    
+        ScrollView {
+            VStack(alignment: .center, spacing: 24) {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(Color(.systemGray5))
+                        .frame(width: 80, height: 80)
+                    .mask(Circle())
+                    Image(systemName: "arkit")
+                        .resizable()
+                        .frame(width: 35, height: 40)
+                        
+                }
+                VStack(spacing: 12.0) {
+                    Text("No Active Project")
+                        .fontWeight(.medium)
+                    Text("After you process your photo captures, your project will be displayed here. To begin, simply tap on the purple button above to get started.")
+                        .font(.callout)
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                }
             }
-            VStack(spacing: 12.0) {
-                Text("No Active Project")
-                    .fontWeight(.medium)
-                Text("After you process your photo captures, your project will be displayed here. To begin, simply tap on the purple button above to get started.")
-                    .font(.callout)
-                    .foregroundColor(Color.gray)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-            }
+            .padding(.top, 42.0)
         }
-        .padding(.top, 42.0)
     }
     
 }

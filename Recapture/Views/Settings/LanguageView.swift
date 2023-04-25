@@ -25,7 +25,8 @@ struct LanguageView: View {
                 VStack(alignment: .leading, spacing:4) {
                     Text(item.title)
                     Text(item.subTitle)
-                        .font(.footnote)
+                        .font(.callout)
+                        .foregroundColor(Color.gray)
                 }
                 Spacer()
                 Image(systemName: item.isChecked ? "checkmark" : "square")
@@ -61,6 +62,18 @@ struct LanguageView_Previews: PreviewProvider {
         LanguageView()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -184,9 +184,6 @@ struct WalletHistory: View {
         WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
         WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
         WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
-        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
-        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000),
-        WalletItem(status: "Successfull", date: Date(), currency: "N", amount: 30000)
     ]
     
     let dateFormatter: DateFormatter = {

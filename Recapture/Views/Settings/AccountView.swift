@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AccountView: View {
     @State private var fullname = ""
+    @State private var username = ""
+    @State private var email = ""
     
     var body: some View {
         //Forms
@@ -23,14 +25,14 @@ struct AccountView: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    TextField("zojie", text: $fullname)
+                    TextField("zojie", text: $username)
                     Text("Username")
                         .font(.footnote)
                         .foregroundColor(.gray)
                 }
                 
                 VStack(alignment: .leading) {
-                    TextField("iszojie@gmail", text: $fullname)
+                    TextField("iszojie@gmail", text: $email)
                     Text("Email Address")
                         .font(.footnote)
                         .foregroundColor(.gray)
@@ -41,28 +43,22 @@ struct AccountView: View {
             Section(header: Text("Security")) {
                 
                 //Change password
-                HStack {
+                NavigationLink(destination: ForgotPasswordView(), label: {
                     Text("Change Password")
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(Color.gray)
-                }
+                })
                 
                 //Logout
-                HStack {
+                NavigationLink(destination: LoginView(), label: {
                     Text("Logout")
-                }
+                })
             }
             
             //Delete account
             Section {
-                HStack {
-                    Text("Delete account")
+                NavigationLink(destination: SignupView(), label: {
+                    Text("Delete Account")
                         .foregroundColor(.red)
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(.gray)
-                }
+                })
             }
         }
         .navigationTitle("Manage account")
