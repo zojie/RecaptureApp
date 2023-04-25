@@ -65,50 +65,61 @@ struct Tutorial_Previews: PreviewProvider {
 
 
 
-
+struct TutorialItem: Identifiable {
+    var id = UUID()
+    var thumbnail: String
+    var title: String
+    var videoSource: String
+}
 
 
 
 
 struct VideoTutorials:View {
-    @State private var revealDetails = false
+    @State private var tutorialItems = [
+        TutorialItem(thumbnail: "WaterBottle", title: "Introduction to Recapture AR and all other things attached", videoSource: "YouTube"),
+        TutorialItem(thumbnail: "WaterBottle", title: "Capturing Model Perfect Images for my AR experinece", videoSource: "YouTube"),
+        TutorialItem(thumbnail: "WaterBottle", title: "Learn more on how RecaptureAR pricing works", videoSource: "YouTube"),
+        TutorialItem(thumbnail: "WaterBottle", title: "The do's and don'ts of photogrammetry capture", videoSource: "YouTube")
+    ]
     
     var body: some View {
         
-        List {
-            ForEach(0..<5) { item in
-                
-                //ImageAR Preview
-                HStack {
-                    Image(systemName: "image")
-                        .frame(width: 72, height: 72)
-                        .background(Color(.systemGray5))
-                        .cornerRadius(12)
-                    
-                    //Project Details
-                    VStack(alignment: .leading, spacing: 4.0) {
-                        Text("Introduction to Recapture AR and all other things attached to it")
-                            .font(.body)
-                            .fontWeight(.semibold)
-                            .lineLimit(2)
+            List(tutorialItems) { item in
+                Button {
+                    //
+                } label: {
+                    HStack {
+                        Image(systemName: "image")
+                            .frame(width: 72, height: 72)
+                            .background(Color(.systemGray5))
+                            .cornerRadius(12)
                         
-                        HStack {
-                            Image(systemName: "play")
-                            Text ("102 Views")
+                        //Project Details
+                        VStack(alignment: .leading, spacing: 4.0) {
+                            Text(item.title)
+                                .font(.body)
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(2)
+                            
+                            HStack {
+                                Image(systemName: "play")
+                                Text (item.videoSource)
+                            }
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
                         }
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .padding(.vertical)
+                        
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .foregroundColor(.blue)
                     }
-                    .padding(.vertical)
-                    
-                    Spacer()
-                    Image(systemName: "arrow.up.right")
-                        .foregroundColor(.blue)
                 }
             }
-            
-        }
-        .listStyle(.plain)
+            .listStyle(.plain)
+
 
     }
 }
