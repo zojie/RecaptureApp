@@ -64,9 +64,15 @@ struct QRCodeView: View {
                     Text("To view AR in your browser click on link to open")
                         .font(.callout)
                         .foregroundColor(.gray)
-                    Text("recaptureapp.com/360/39848")
-                        .font(.callout)
-                        .foregroundColor(.blue)
+                    Button(action: {
+                        guard let url = URL(string: "https://twitter.com/ehizojieihayere") else { return }
+                        UIApplication.shared.open(url)
+                    }) {
+                        Text("recaptureapp.com/360/39848")
+                            .font(.callout)
+                            .foregroundColor(.blue)
+                    }
+                    
                 }
                 
             }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SupportView: View {
     var body: some View {
@@ -17,10 +18,10 @@ struct SupportView: View {
 //
                 List {
                     
-                    Button {
-                        //Do something here
-                    } label: {
-                        
+                    Button(action: {
+                        guard let url = URL(string: "https://forms.google.com/") else { return }
+                        UIApplication.shared.open(url)
+                    }) {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("Report an issue")
@@ -36,10 +37,12 @@ struct SupportView: View {
                     }
                     
                     
-                    Button {
-                        //Do something here
-                    } label: {
-                        
+                    
+                    
+                    Button(action: {
+                        guard let url = URL(string: "https://forms.google.com/") else { return }
+                        UIApplication.shared.open(url)
+                    }) {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("Share feature suggestions")
@@ -56,10 +59,34 @@ struct SupportView: View {
                     
                     
                     
-                    Button {
-                        //Do something here
-                    } label: {
-                        
+                    Button(action: {
+                        if let url = URL(string: "https://itunes.apple.com/app/idcom.benagos.recapture?action=write-review") {
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
+                    }) {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("Rate us")
+                                    .fontWeight(.medium)
+                                Text("Boost our presence :)")
+                                    .font(.callout)
+                                    .foregroundColor(.gray)
+                            }
+                            Spacer()
+                            Image(systemName: "arrow.up.right")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    
+                    
+                    
+                    
+                    
+                    Button(action: {
+                        if let url = URL(string: "https://itunes.apple.com/app/idcom.benagos.recapture?action=write-review") {
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
+                    }) {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("Give us a review")
@@ -73,6 +100,7 @@ struct SupportView: View {
                                 .foregroundColor(.blue)
                         }
                     }
+                    
                 }
                 .navigationTitle("Support")
                 .navigationBarTitleDisplayMode(.inline)

@@ -23,7 +23,7 @@ struct OnboardingView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("AR MADE EASY")
                             .font(.callout)
-                            .fontWeight(.bold)
+                            .fontWeight(.semibold)
                             .foregroundColor(Color.gray)
                             .tracking(-0.88)
                         Text("Create high quality 3D AR Model from Photos")
@@ -31,6 +31,7 @@ struct OnboardingView: View {
                             .fontWeight(.bold)
                             .tracking(-0.88)
                         Text("With RecaptureAR, convert your still photos into high-quality 3Dff AR models and create experineces in a whole new way maximumm.")
+//                            .foregroundColor(Color.gray)
                             .multilineTextAlignment(.leading)
                             .lineLimit(3)
                     }

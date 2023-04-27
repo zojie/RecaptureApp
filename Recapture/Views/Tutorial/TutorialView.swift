@@ -69,6 +69,7 @@ struct TutorialItem: Identifiable {
     var id = UUID()
     var thumbnail: String
     var title: String
+    var url: String
     var videoSource: String
 }
 
@@ -77,18 +78,19 @@ struct TutorialItem: Identifiable {
 
 struct VideoTutorials:View {
     @State private var tutorialItems = [
-        TutorialItem(thumbnail: "WaterBottle", title: "Introduction to Recapture AR and all other things attached", videoSource: "YouTube"),
-        TutorialItem(thumbnail: "WaterBottle", title: "Capturing Model Perfect Images for my AR experinece", videoSource: "YouTube"),
-        TutorialItem(thumbnail: "WaterBottle", title: "Learn more on how RecaptureAR pricing works", videoSource: "YouTube"),
-        TutorialItem(thumbnail: "WaterBottle", title: "The do's and don'ts of photogrammetry capture", videoSource: "YouTube")
+        TutorialItem(thumbnail: "WaterBottle", title: "Introduction to Recapture AR and all other things attached", url: "https://www.youtube.com/watch?v=LwsAYQFpLXY&list=PLX5WbxWCSYimtC5F-f-M6djmMQzFilJNg&index=2" ,videoSource: "YouTube"),
+        TutorialItem(thumbnail: "WaterBottle", title: "Capturing Model Perfect Images for my AR experinece", url: "https://www.youtube.com/watch?v=LwsAYQFpLXY&list=PLX5WbxWCSYimtC5F-f-M6djmMQzFilJNg&index=2" , videoSource: "YouTube"),
+        TutorialItem(thumbnail: "WaterBottle", title: "Learn more on how RecaptureAR pricing works", url: "https://www.youtube.com/watch?v=LwsAYQFpLXY&list=PLX5WbxWCSYimtC5F-f-M6djmMQzFilJNg&index=2" , videoSource: "YouTube"),
+        TutorialItem(thumbnail: "WaterBottle", title: "The do's and don'ts of photogrammetry capture", url: "https://www.youtube.com/watch?v=LwsAYQFpLXY&list=PLX5WbxWCSYimtC5F-f-M6djmMQzFilJNg&index=2" , videoSource: "YouTube")
     ]
     
     var body: some View {
         
             List(tutorialItems) { item in
-                Button {
-                    //
-                } label: {
+                Button(action: {
+                    guard let url = URL(string: item.url) else { return }
+                            UIApplication.shared.open(url)
+                }) {
                     HStack {
                         Image(systemName: "image")
                             .frame(width: 72, height: 72)
@@ -116,6 +118,7 @@ struct VideoTutorials:View {
                         Image(systemName: "arrow.up.right")
                             .foregroundColor(.blue)
                     }
+                    
                 }
             }
             .listStyle(.plain)

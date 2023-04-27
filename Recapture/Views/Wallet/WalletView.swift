@@ -33,12 +33,14 @@ struct WalletView: View {
                             Text("Payment powered by Paystack")
                                 .font(.footnote)
                                 .foregroundColor(Color.gray)
-                            Button {
-                                //Do something here
-                            } label: {
+                            Button(action: {
+                                guard let url = URL(string: "https://www.paystack.com") else { return }
+                                UIApplication.shared.open(url)
+                            }) {
                                 Text("Learn More")
                                     .font(.footnote)
                             }
+
                         }
                         
                         
@@ -77,20 +79,18 @@ struct WalletView: View {
                         }
                     })
                     
+                    
                     Button(action: {
-                        
-                    }, label: {
-                        NavigationLink(destination: OnboardingView()) {
-                            HStack {
-                                Text("Manage Wallet")
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height: 50.0)
-                                    .background(Color(hue: 0.485, saturation: 0.949, brightness: 0.726))
-                                    .cornerRadius(10)
-                            }
-                        }
-                    })
+                        guard let url = URL(string: "https://dashboard.paystack.com/#/login") else { return }
+                        UIApplication.shared.open(url)
+                    }) {
+                        Text("Manage Wallet")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50.0)
+                            .background(Color(hue: 0.485, saturation: 0.949, brightness: 0.726))
+                            .cornerRadius(10)
+                    }
 
                     
                 }
