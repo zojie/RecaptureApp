@@ -9,7 +9,11 @@ import SwiftUI
 import PhotosUI
 
 struct ProfilePhotoView: View {
+    
+    
     var body: some View {
+      
+        
         
         VStack {
 
@@ -21,28 +25,28 @@ struct ProfilePhotoView: View {
                     // Fallback on earlier versions
                 }
 
-                
+
                 Text("Profile photo will be used in QR code generation and as your fav icon. Kindly use a square image when uploading to fit frame.")
                     .font(.callout)
                     .foregroundColor(Color.gray)
                     .multilineTextAlignment(.center)
-                
+
             }
             .padding()
-            
+
         }
         .navigationTitle("Manage account")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            
+
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    
+
                 }, label: {
                     Text("Done")
                         .foregroundColor(.blue)
                 })
-                
+
             }
         }
     }

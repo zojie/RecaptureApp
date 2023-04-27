@@ -10,98 +10,112 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         
-        Form {
+        VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
+                Text("Settings")
+                    .font(.system(size: 23, weight: .bold))
+                    .foregroundColor(Color.gray)
+                    .tracking(-0.88)
+                Text("Manage your account")
+                    .font(.system(size: 23, weight: .bold))
+                    .tracking(-0.44)
+            }
+            .background(.clear)
+            .padding(.horizontal)
             
-            Section {
+            Form {
                 
-                NavigationLink(destination: ProfilePhotoView(), label: {
-                    HStack {
-                        Image("OnboardingImage")
-                            .frame(width: 56.0, height: 56.0)
-                            .mask(Circle())
-                        
-                        VStack(alignment: .leading){
-                            Text("Profile Photo")
-                                .fontWeight(.medium)
-                            Text("Tap to edit yor profile photo")
-                                .font(.callout)
-                                .foregroundColor(.gray)
-                        }
-                    }
+                Section {
                     
-                })
-                
-            }
-            
-            Section(header: Text("General")) {
-                
-                //Account
-                NavigationLink(destination: AccountView(), label: {
-                    Text("Account")
-                })
-                
-                
-                //Domain
-                NavigationLink(destination: DomainView(), label: {
-                    Text("Domain")
-                })
-                
-                //Subsciption
-                NavigationLink(destination: SubscriptionView(), label: {
-                    Text("Subscription")
-                })
-            }
-            
-            //2ND SECTION
-            Section(header: Text("Help")) {
-                
-                //Tutorials
-                NavigationLink(destination: TutorialView(), label: {
-                    Text("Tutorials")
-                })
-                
-                //Language
-                NavigationLink(destination: LanguageView(), label: {
-                    HStack {
-                        Text("Language")
-                        Spacer()
-                        Text("English")
-                            .foregroundColor(Color.gray)
-                    }
-                })
-                
-                //Contact Support
-                NavigationLink(destination: SupportView(), label: {
-                    Text("Support")
-                })
-                
-            }
-            
-            
-            //4TH SECTION
-            Section(header: Text("About App")) {
-                
-                //Legal
-                NavigationLink(destination: LegalView(), label: {
-                    Text("Legal")
-                })
-                
-                //About App
-                NavigationLink(destination: AboutCreatorView(), label: {
-                    Text("About RecaptureAR")
-                })
-                
-                //Creator
-                HStack {
-                    Text("Created by Ehizojie Ihayere")
-//                        .foregroundColor(.blue)
+                    NavigationLink(destination: ProfilePhotoView(), label: {
+                        HStack {
+                            Image("OnboardingImage")
+                                .frame(width: 56.0, height: 56.0)
+                                .mask(Circle())
+                            
+                            VStack(alignment: .leading){
+                                Text("Profile Photo")
+                                    .fontWeight(.medium)
+                                Text("Tap to edit yor profile photo")
+                                    .font(.callout)
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        
+                    })
+                    
                 }
                 
+                Section(header: Text("General")) {
+                    
+                    //Account
+                    NavigationLink(destination: AccountView(), label: {
+                        Text("Account")
+                    })
+                    
+                    
+                    //Domain
+                    NavigationLink(destination: DomainView(), label: {
+                        Text("Domain")
+                    })
+                    
+                    //Subsciption
+                    NavigationLink(destination: SubscriptionView(), label: {
+                        Text("Subscription")
+                    })
+                }
+                
+                //2ND SECTION
+                Section(header: Text("Help")) {
+                    
+                    //Tutorials
+                    NavigationLink(destination: TutorialView(), label: {
+                        Text("Tutorials")
+                    })
+                    
+                    //Language
+                    NavigationLink(destination: LanguageView(), label: {
+                        HStack {
+                            Text("Language")
+                            Spacer()
+                            Text("English")
+                                .foregroundColor(Color.gray)
+                        }
+                    })
+                    
+                    //Contact Support
+                    NavigationLink(destination: SupportView(), label: {
+                        Text("Support")
+                    })
+                    
+                }
+                
+                
+                //4TH SECTION
+                Section(header: Text("About App")) {
+                    
+                    //Legal
+                    NavigationLink(destination: LegalView(), label: {
+                        Text("Legal")
+                    })
+                    
+                    //About App
+                    NavigationLink(destination: AboutCreatorView(), label: {
+                        Text("About RecaptureAR")
+                    })
+                    
+                    //Creator
+                    HStack {
+                        Text("Created by Ehizojie Ihayere")
+    //                        .foregroundColor(.blue)
+                    }
+                    
+                }
             }
+    //        .navigationTitle("Settings")
+    //        .navigationBarTitleDisplayMode(.large)
+            .accentColor(.blue)
         }
-        .navigationTitle("Settings")
-        .navigationBarTitleDisplayMode(.large)
-        .accentColor(.blue)
         
     }
 }
@@ -113,3 +127,5 @@ struct SettingsView_Previews: PreviewProvider {
         }
     }
 }
+
+

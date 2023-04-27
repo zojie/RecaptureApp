@@ -89,7 +89,7 @@ struct ProjectItem: Identifiable {
 
 
 
-struct ActiveProjects:View {
+struct ActiveProjects: View {
     @State var projectItems = [
         ProjectItem(image: "PizzaImage", title: "Peperoni Crusted Pizza", created: Date(), lastEdit: Date(), projectSize: 46, imageCount: 26),
         ProjectItem(image: "WaterBottle", title: "Gym Water Bottle", created: Date(), lastEdit: Date(), projectSize: 32, imageCount: 30),

@@ -15,6 +15,17 @@ struct TutorialView: View {
         
         VStack(alignment: .leading) {
             
+            VStack(alignment: .leading) {
+                Text("Tutorials")
+                    .font(.system(size: 23, weight: .bold))
+                    .foregroundColor(Color.gray)
+                    .tracking(-0.88)
+                Text("Lets see how its done")
+                    .font(.system(size: 23, weight: .bold))
+                    .tracking(-0.44)
+            }
+            .padding(.horizontal)
+            
             Picker("", selection: $segmentedTutorial) {
                 Text("Video Tutorial").tag(0)
                 Text("FAQ").tag(1)
@@ -33,8 +44,8 @@ struct TutorialView: View {
             
             
         }
-        .navigationTitle("Help Center")
-        .navigationBarTitleDisplayMode(.large)
+//        .navigationTitle("Help Center")
+//        .navigationBarTitleDisplayMode(.large)
 
 
     }

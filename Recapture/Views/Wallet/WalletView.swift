@@ -13,7 +13,18 @@ struct WalletView: View {
     var body: some View {
         
         
-        VStack(spacing: 42.0) {
+        VStack(alignment: .leading) {
+            
+            VStack(alignment: .leading) {
+                Text("Wallet")
+                    .font(.system(size: 23, weight: .bold))
+                    .foregroundColor(Color.gray)
+                    .tracking(-0.88)
+                Text("Your Spending History")
+                    .font(.system(size: 23, weight: .bold))
+                    .tracking(-0.44)
+            }
+            .padding(.horizontal)
     
             //Wallet
             VStack(spacing: 16.0) {
@@ -25,7 +36,7 @@ struct WalletView: View {
                                 .foregroundColor(Color.gray)
                                 .tracking(-0.4)
                             Text("N200,000")
-                                .font(.title)
+                                .font(.title2)
                                 .fontWeight(.bold)
                                 .tracking(-0.4)
                         }
@@ -137,8 +148,8 @@ struct WalletView: View {
             
             
         }
-        .navigationTitle("Wallet")
-        .navigationBarTitleDisplayMode(.large)
+//        .navigationTitle("Wallet")
+//        .navigationBarTitleDisplayMode(.large)
 
         
         

@@ -28,11 +28,11 @@ struct WelcomeCard: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Welcome to")
-                        .font(.system(size: 22, weight: .bold))
+                        .font(.system(size: 23, weight: .bold))
                         .foregroundColor(Color.gray)
                         .tracking(-0.88)
                     Text("Ehizojie’s Reality Library")
-                        .font(.system(size: 22, weight: .bold))
+                        .font(.system(size: 23, weight: .bold))
                         .tracking(-0.44)
                 }
                 Spacer()
