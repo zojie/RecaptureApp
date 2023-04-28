@@ -19,7 +19,7 @@ struct OnboardingView: View {
                 
                 
                 
-                VStack {
+                VStack(alignment: .leading) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("AR MADE EASY")
                             .font(.callout)

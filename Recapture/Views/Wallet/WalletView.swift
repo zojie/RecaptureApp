@@ -25,7 +25,8 @@ struct WalletView: View {
                     .tracking(-0.44)
             }
             .padding(.horizontal)
-    
+            
+            VStack(spacing: 32) {
             //Wallet
             VStack(spacing: 16.0) {
                 HStack {
@@ -51,7 +52,7 @@ struct WalletView: View {
                                 Text("Learn More")
                                     .font(.footnote)
                             }
-
+                            
                         }
                         
                         
@@ -84,7 +85,7 @@ struct WalletView: View {
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 50.0)
-                                    .background(Color(red: 0.047, green: 0.641, blue: 0.859))
+                                    .background((Color(red: 0.047, green: 0.641, blue: 0.859)))
                                     .cornerRadius(10)
                             }
                         }
@@ -102,13 +103,12 @@ struct WalletView: View {
                             .background(Color(hue: 0.485, saturation: 0.949, brightness: 0.726))
                             .cornerRadius(10)
                     }
-
+                    
                     
                 }
                 .padding(.horizontal)
             }
-
-
+            
             
             //feltgood
             VStack(spacing: 16.0) {
@@ -125,25 +125,26 @@ struct WalletView: View {
                     
                     Spacer()
                     
-                        Button {
-                            //Do something here
-                        } label: {
-                            HStack {
-                                Text("Sort")
-                                    .font(.callout)
-                                    .fontWeight(.regular)
-                                Image(systemName: "chevron.down")
-                                    .font(.system(size: 11))
-                            }
-                            .frame(width: 80.0)
-                            .frame(height: 36.0)
-                            .background(Color(.systemGray5))
-                            .cornerRadius(10)
+                    Button {
+                        //Do something here
+                    } label: {
+                        HStack {
+                            Text("Sort")
+                                .font(.callout)
+                                .fontWeight(.regular)
+                            Image(systemName: "chevron.down")
+                                .font(.system(size: 11))
                         }
+                        .frame(width: 80.0)
+                        .frame(height: 36.0)
+                        .background(Color(.systemGray5))
+                        .cornerRadius(10)
+                    }
                 }
                 .padding(.horizontal)
                 
                 WalletHistory()
+            }
             }
             
             

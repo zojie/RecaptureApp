@@ -11,24 +11,34 @@ struct QRCodeView: View {
     @State private var showGreeting = true
     @State private var foreColor: Color = .white
     @State private var backColor: Color = .black
+    
+    let buttonColor = LinearGradient(
+        gradient: Gradient(stops: [
+            .init(color: Color(#colorLiteral(red: 0, green: 0.47843137383461, blue: 1, alpha: 1)), location: 0),
+            .init(color: Color(#colorLiteral(red: 0.5607843399047852, green: 0, blue: 0.9333333373069763, alpha: 1)), location: 1)]),
+        startPoint: UnitPoint(x: 0.062499975840183686, y: 0.07031251435910296),
+        endPoint: UnitPoint(x: 0.7890624911997284, y: 0.8281249745741668))
 
     
     var body: some View {
         
         ScrollView {
-            VStack(spacing: 42.0) {
+            
+            VStack {
+                Image(systemName: "qrcode")
+                    .font(.system(size: 100.0, weight: .medium))
+                //                        .resizable()
+                    .frame(width: 150.0, height: 150.0)
+                    .foregroundColor(foreColor)
+                    .background(backColor)
+                    .clipShape(Rectangle())
+                    .cornerRadius(20)
+            }
+            
+            VStack(alignment: .leading, spacing: 42.0) {
                 
                 //QRCode Shapes
-                VStack(alignment: .center) {
-                        Image(systemName: "qrcode")
-                        .font(.system(size: 100.0, weight: .medium))
-    //                        .resizable()
-                            .frame(width: 150.0, height: 150.0)
-                            .foregroundColor(foreColor)
-                            .background(backColor)
-                            .clipShape(Rectangle())
-                            .cornerRadius(20)
-                    }
+                
                 
                 //QRCode Color
                 VStack(spacing: 20.0) {
@@ -55,7 +65,7 @@ struct QRCodeView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .frame(height: 50.0)
-                        .background(.blue)
+                        .background(buttonColor)
                         .cornerRadius(10)
                 }
                 
@@ -74,6 +84,7 @@ struct QRCodeView: View {
                     }
                     
                 }
+                
                 
             }
             .padding()

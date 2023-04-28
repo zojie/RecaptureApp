@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct WebLinkView: View {
+    let buttonColor = LinearGradient(
+        gradient: Gradient(stops: [
+            .init(color: Color(#colorLiteral(red: 0, green: 0.47843137383461, blue: 1, alpha: 1)), location: 0),
+            .init(color: Color(#colorLiteral(red: 0.5607843399047852, green: 0, blue: 0.9333333373069763, alpha: 1)), location: 1)]),
+        startPoint: UnitPoint(x: 0.062499975840183686, y: 0.07031251435910296),
+        endPoint: UnitPoint(x: 0.7890624911997284, y: 0.8281249745741668))
+    
+    
     var body: some View {
         
         ScrollView {
@@ -30,7 +38,7 @@ struct WebLinkView: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
-                .background(.blue)
+                .background(buttonColor)
                 .cornerRadius(10)
                 
                 //Extra infos
